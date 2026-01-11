@@ -1,10 +1,29 @@
 
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// The GoogleGenAI client must NOT be instantiated in browser bundles because
+// it requires an API key and would expose secrets. Create the client only
+// when running in a Node-like environment (server-side).
+let ai: any = null;
+if (typeof window === 'undefined') {
+  // Running on the server (Node). Expect an API key in process.env.API_KEY
+  // or another server-side secrets mechanism. DO NOT expose this to the client.
+  ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+} else {
+  // In the browser: keep ai null to avoid the library throwing during bundle/runtime.
+  ai = null;
+}
 
 export const getGeminiResponse = async (prompt: string) => {
   try {
+    if (!ai) {
+      // Clear error: this function is being called from client-side code.
+      // The Gemini / Google GenAI client must be called from a secure server
+      // where the API key can be kept secret. Return a helpful message.
+      console.error('Gemini client unavailable in browser. Move API calls to a server endpoint.');
+      return { text: 'AI service unavailable in the browser. Please call this endpoint from a server that holds the API key.', sources: [] };
+    }
+
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,
