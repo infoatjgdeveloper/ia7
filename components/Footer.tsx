@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 
             <div className="space-y-3">
               <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Contact Details</p>
-              <p>Email: <a href="mailto:info@ia7globaltech.eu" className="text-[#0055ff] hover:underline">info@ia7globaltech.eu</a></p>
+              <p>Email: <a href="mailto:sales@ia7globaltech.eu" className="text-[#0055ff] hover:underline">sales@ia7globaltech.eu</a></p>
               <p>Phone: <a href="tel:+491625767497" className="text-slate-700">+49 162 5767497</a></p>
             </div>
 
