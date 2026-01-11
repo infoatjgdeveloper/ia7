@@ -1,0 +1,12 @@
+/* index.css — project-level styles (keeps the link in index.html from 404ing)
+   You can add global overrides here. Tailwind is also available via the CDN script in index.html.
+*/
+
+html, body, #root {
+  height: 100%;
+}
+
+/* small helper to ensure root fills viewport */
+#root {
+  min-height: 100vh;
+}
