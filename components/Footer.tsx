@@ -42,30 +42,40 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-[11px] text-slate-500 leading-relaxed font-medium">
             <div className="space-y-3">
               <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Company Information</p>
-              <p className="text-slate-700">IA7 Global Tech GmbH</p>
-              <p>Stralauer Allee 2B<br />10245 Berlin, Germany</p>
-              <p>Represented by Managing Director:<br /><span className="text-slate-700 font-bold">Alexander Von Straub</span></p>
+              <p className="text-slate-700">IA7 Global Trading UG</p>
+              <p>Kolonnenstrasse 8<br />DE-10827 Berlin, Germany</p>
+              <p>Managing Director:<br /><span className="text-slate-700 font-bold">Agnieszka Pasek</span></p>
             </div>
 
             <div className="space-y-3">
               <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Contact Details</p>
-              <p>Email: <a href="mailto:ops@ia7global.tech" className="text-[#0055ff] hover:underline">ops@ia7global.tech</a></p>
-              <p>Phone: +49 (0) 30 9283 102</p>
-              <p>Fax: +49 (0) 30 9283 105</p>
+              <p>Email: <a href="mailto:info@ia7globaltech.eu" className="text-[#0055ff] hover:underline">info@ia7globaltech.eu</a></p>
+              <p>Phone: <a href="tel:+491625767497" className="text-slate-700">+49 162 5767497</a></p>
             </div>
 
             <div className="space-y-3">
-              <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Registration</p>
-              <p>Register Court: Amtsgericht Charlottenburg (Berlin)</p>
-              <p>Registration Number: HRB 209384 B</p>
-              <p>VAT ID (USt-IdNr.): DE 329048123</p>
+              <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Tax ID</p>
+              <p>VAT ID (USt-IdNr.): <span className="text-slate-700 font-bold">DE451313995</span></p>
             </div>
 
             <div className="space-y-3">
-              <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Regulatory Body</p>
+              <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Responsible</p>
               <p>Responsible for content according to § 55 Abs. 2 RStV:</p>
-              <p>Elena M. Rossi<br />IA7 Global Tech Strategy Hub</p>
+              <p className="text-slate-700">Agnieszka Pasek<br />IA7 Global Trading UG</p>
               <p className="mt-2 text-[10px] italic">Supervisory Authority: IHK Berlin</p>
+            </div>
+          </div>
+
+          {/* Disclaimer and Bank Details */}
+          <div className="mt-8 text-[11px] text-slate-500 max-w-4xl">
+            <p className="mb-4">Disclaimer: Despite careful review of the content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
+
+            <div className="space-y-2">
+              <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Bank Details</p>
+              <p>Account holder: <span className="text-slate-700 font-bold">IA7 Global Trading UG</span></p>
+              <p>Bank: <span className="text-slate-700">FINOM PAYMENTS</span></p>
+              <p>IBAN: <span className="text-slate-700 font-bold">DE21 1001 8000 0444 7350 68</span></p>
+              <p>BIC: <span className="text-slate-700 font-bold">FNOMDEB2</span></p>
             </div>
           </div>
         </div>

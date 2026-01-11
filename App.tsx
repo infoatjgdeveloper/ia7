@@ -48,15 +48,20 @@ const App: React.FC = () => {
               Our lead consultants are standing by to architect your 2026 systems migration. High-precision strategy for elite operations.
             </p>
             <div className="pt-8">
-              <button className="bg-white text-[#0f172a] px-16 py-6 rounded-full text-xs font-black uppercase tracking-[0.3em] hover:bg-[#0055ff] hover:text-white transition-all shadow-2xl shadow-black/20">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSepDnB0Iwe85gTNT1HbeIAqv-pQLm1aFhE0Qz8iTCeMEwaVPw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-[#0f172a] px-16 py-6 rounded-full text-xs font-black uppercase tracking-[0.3em] hover:bg-[#0055ff] hover:text-white transition-all shadow-2xl shadow-black/20"
+              >
                 Contact Strategy Node
-              </button>
+              </a>
             </div>
           </div>
         </section>
       </main>
       <Footer />
-      <GeminiAssistant />
+      {/* <GeminiAssistant /> */}
     </div>
   );
 };

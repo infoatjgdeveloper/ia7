@@ -17,11 +17,11 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <button className="bg-[#0f172a] text-white px-6 py-2.5 text-[11px] font-bold uppercase tracking-wider hover:bg-[#0055ff] transition-all rounded-full shadow-lg shadow-slate-200">
             Briefing
           </button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
