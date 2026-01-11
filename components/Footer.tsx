@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex gap-8 text-[9px] font-bold uppercase tracking-[0.1em] text-slate-400">
              <a href="#" className="hover:text-[#0055ff] transition-colors">Privacy Policy (GDPR)</a>
-             <a href="#" className="hover:text-[#0055ff] transition-colors">Cookie Settings</a>
+             {/* <a href="#" className="hover:text-[#0055ff] transition-colors">Cookie Settings</a> */}
              <a href="#" className="hover:text-[#0055ff] transition-colors">Terms & Conditions</a>
           </div>
         </div>
