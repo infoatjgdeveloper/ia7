@@ -1,0 +1,8 @@
+{
+  "name": "IA7Global Tech - IT Services & Consultancy",
+  "description": "A high-end, futuristic landing page for IA7Global Tech, a premier global IT consultancy firm.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
