@@ -37,10 +37,10 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Impressum Section - Mandatory under §5 TMG (German Law) */}
-        <div className="pt-16 border-t border-slate-100">
-          <Link to="/impressum" className="text-[12px] font-black uppercase tracking-widest text-slate-900 mb-8 underline decoration-[#0055ff] underline-offset-8 hover:text-[#0055ff] transition-colors inline-block">Impressum / Legal Notice</Link>
+        <div className="pt-2 border-t border-slate-100">
+          {/* <Link to="/impressum" className="text-[12px] font-black uppercase tracking-widest text-slate-900 mb-8 underline decoration-[#0055ff] underline-offset-8 hover:text-[#0055ff] transition-colors inline-block">Impressum / Legal Notice</Link> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-[11px] text-slate-500 leading-relaxed font-medium">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-[11px] text-slate-500 leading-relaxed font-medium">
             <div className="space-y-3">
               <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Company Information</p>
               <p className="text-slate-700">IA7 Global Trading UG</p>
@@ -65,10 +65,10 @@ const Footer: React.FC = () => {
               <p className="text-slate-700">Agnieszka Pasek<br />IA7 Global Trading UG</p>
               <p className="mt-2 text-[10px] italic">Supervisory Authority: IHK Berlin</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Disclaimer and Bank Details */}
-          <div className="mt-8 text-[11px] text-slate-500 max-w-4xl">
+          {/* <div className="mt-8 text-[11px] text-slate-500 max-w-4xl">
             <p className="mb-4">Disclaimer: Despite careful review of the content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
 
             <div className="space-y-2">
@@ -78,6 +78,12 @@ const Footer: React.FC = () => {
               <p>IBAN: <span className="text-slate-700 font-bold">DE21 1001 8000 0444 7350 68</span></p>
               <p>BIC: <span className="text-slate-700 font-bold">FNOMDEB2</span></p>
             </div>
+          </div> */}
+
+          <div className="text-[11px] text-slate-500 max-w-4xl">
+            <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Contact Details</p>
+            <p>Email: <a href="mailto:sales@ia7globaltech.eu" className="text-[#0055ff] hover:underline">sales@ia7globaltech.eu</a></p>
+            <p>Phone: <a href="tel:+491625767497" className="text-slate-700">+49 162 5767497</a></p>
           </div>
         </div>
 
@@ -87,7 +93,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex gap-8 text-[9px] font-bold uppercase tracking-[0.1em] text-slate-400">
             <Link to="/privacy-policy" className="hover:text-[#0055ff] transition-colors">Privacy Policy (GDPR)</Link>
-            {/* <a href="#" className="hover:text-[#0055ff] transition-colors">Cookie Settings</a> */}
+            <Link to="/impressum" className="hover:text-[#0055ff] transition-colors">Impressum</Link>
             <Link to="/terms-and-conditions" className="hover:text-[#0055ff] transition-colors">Terms & Conditions</Link>
             <Link to="/cancellation-policy" className="hover:text-[#0055ff] transition-colors">Cancellation Policy</Link>
             <Link to="/faq" className="hover:text-[#0055ff] transition-colors">FAQ</Link>
