@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const Footer: React.FC = () => {
               Elite IT Consultancy & Software Architecture. Serving the European Union with high-precision digital systems.
             </p>
           </div>
-          
+
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0055ff]">Capabilities</h4>
             <ul className="grid grid-cols-2 gap-y-4 gap-x-8 text-xs font-semibold uppercase text-slate-400">
@@ -37,8 +38,8 @@ const Footer: React.FC = () => {
 
         {/* Impressum Section - Mandatory under §5 TMG (German Law) */}
         <div className="pt-16 border-t border-slate-100">
-          <h5 className="text-[12px] font-black uppercase tracking-widest text-slate-900 mb-8 underline decoration-[#0055ff] underline-offset-8">Impressum / Legal Notice</h5>
-          
+          <Link to="/impressum" className="text-[12px] font-black uppercase tracking-widest text-slate-900 mb-8 underline decoration-[#0055ff] underline-offset-8 hover:text-[#0055ff] transition-colors inline-block">Impressum / Legal Notice</Link>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-[11px] text-slate-500 leading-relaxed font-medium">
             <div className="space-y-3">
               <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Company Information</p>
@@ -85,9 +86,11 @@ const Footer: React.FC = () => {
             © 2026 IA7 GLOBAL TECH GMBH. ALL SYSTEMS OPERATIONAL.
           </div>
           <div className="flex gap-8 text-[9px] font-bold uppercase tracking-[0.1em] text-slate-400">
-             <a href="#" className="hover:text-[#0055ff] transition-colors">Privacy Policy (GDPR)</a>
-             {/* <a href="#" className="hover:text-[#0055ff] transition-colors">Cookie Settings</a> */}
-             <a href="#" className="hover:text-[#0055ff] transition-colors">Terms & Conditions</a>
+            <Link to="/privacy-policy" className="hover:text-[#0055ff] transition-colors">Privacy Policy (GDPR)</Link>
+            {/* <a href="#" className="hover:text-[#0055ff] transition-colors">Cookie Settings</a> */}
+            <Link to="/terms-and-conditions" className="hover:text-[#0055ff] transition-colors">Terms & Conditions</Link>
+            <Link to="/cancellation-policy" className="hover:text-[#0055ff] transition-colors">Cancellation Policy</Link>
+            <Link to="/faq" className="hover:text-[#0055ff] transition-colors">FAQ</Link>
           </div>
         </div>
       </div>
