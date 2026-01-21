@@ -1,8 +1,10 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <footer className="pt-24 pb-12 px-6 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
@@ -12,26 +14,26 @@ const Footer: React.FC = () => {
               IA7 <span className="text-[#0055ff]">GLOBAL TECH</span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-medium">
-              Elite IT Consultancy & Software Architecture. Serving the European Union with high-precision digital systems.
+              {t('footer.description')}
             </p>
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0055ff]">Capabilities</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0055ff]">{t('footer.capabilities')}</h4>
             <ul className="grid grid-cols-2 gap-y-4 gap-x-8 text-xs font-semibold uppercase text-slate-400">
-              <li><a href="#services" className="hover:text-slate-900 transition-colors">Web Development</a></li>
-              <li><a href="#services" className="hover:text-slate-900 transition-colors">Cloud Computing</a></li>
-              <li><a href="#services" className="hover:text-slate-900 transition-colors">Cybersecurity</a></li>
-              <li><a href="#services" className="hover:text-slate-900 transition-colors">AI/ML</a></li>
-              <li><a href="#services" className="hover:text-slate-900 transition-colors">AI Training</a></li>
+              <li><a href="#services" className="hover:text-slate-900 transition-colors">{t('footer.web_development')}</a></li>
+              <li><a href="#services" className="hover:text-slate-900 transition-colors">{t('footer.cloud_computing')}</a></li>
+              <li><a href="#services" className="hover:text-slate-900 transition-colors">{t('footer.cybersecurity')}</a></li>
+              <li><a href="#services" className="hover:text-slate-900 transition-colors">{t('footer.ai_ml')}</a></li>
+              <li><a href="#services" className="hover:text-slate-900 transition-colors">{t('footer.ai_training')}</a></li>
             </ul>
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0055ff]">Protocol Feed</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0055ff]">{t('footer.protocol_feed')}</h4>
             <div className="flex bg-slate-50 p-1 rounded-xl border border-slate-100 max-w-sm">
-              <input type="email" placeholder="Briefing Email" className="bg-transparent px-4 py-2 text-xs w-full focus:outline-none font-medium" />
-              <button className="bg-[#0f172a] text-white px-5 py-2 text-[10px] font-black uppercase rounded-lg hover:bg-[#0055ff] transition-colors">Join</button>
+              <input type="email" placeholder={t('footer.email_placeholder')} className="bg-transparent px-4 py-2 text-xs w-full focus:outline-none font-medium" />
+              <button className="bg-[#0f172a] text-white px-5 py-2 text-[10px] font-black uppercase rounded-lg hover:bg-[#0055ff] transition-colors">{t('footer.join')}</button>
             </div>
           </div>
         </div>
@@ -81,7 +83,7 @@ const Footer: React.FC = () => {
           </div> */}
 
           <div className="text-[11px] text-slate-500 max-w-4xl">
-            <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">Contact Details</p>
+            <p className="font-bold text-slate-900 text-[10px] uppercase tracking-wider">{t('footer.contact_details')}</p>
             <p>Email: <a href="mailto:sales@ia7globaltech.eu" className="text-[#0055ff] hover:underline">sales@ia7globaltech.eu</a></p>
             <p>Phone: <a href="tel:+491625767497" className="text-slate-700">+49 162 5767497</a></p>
           </div>
@@ -89,14 +91,14 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-slate-50 mt-16">
           <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-slate-300">
-            © 2026 IA7 GLOBAL TECH GMBH. ALL SYSTEMS OPERATIONAL.
+            {t('footer.copyright')}
           </div>
           <div className="flex gap-8 text-[9px] font-bold uppercase tracking-[0.1em] text-slate-400">
-            <Link to="/privacy-policy" className="hover:text-[#0055ff] transition-colors">Privacy Policy (GDPR)</Link>
-            <Link to="/impressum" className="hover:text-[#0055ff] transition-colors">Impressum</Link>
-            <Link to="/terms-and-conditions" className="hover:text-[#0055ff] transition-colors">Terms & Conditions</Link>
-            <Link to="/cancellation-policy" className="hover:text-[#0055ff] transition-colors">Cancellation Policy</Link>
-            <Link to="/faq" className="hover:text-[#0055ff] transition-colors">FAQ</Link>
+            <Link to="/privacy-policy" className="hover:text-[#0055ff] transition-colors">{t('footer.privacy_policy')}</Link>
+            <Link to="/impressum" className="hover:text-[#0055ff] transition-colors">{t('footer.impressum')}</Link>
+            <Link to="/terms-and-conditions" className="hover:text-[#0055ff] transition-colors">{t('footer.terms')}</Link>
+            <Link to="/cancellation-policy" className="hover:text-[#0055ff] transition-colors">{t('footer.cancellation')}</Link>
+            <Link to="/faq" className="hover:text-[#0055ff] transition-colors">{t('footer.faq')}</Link>
           </div>
         </div>
       </div>

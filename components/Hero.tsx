@@ -1,8 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { searchEuropeTrends } from '../services/geminiService';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [signal, setSignal] = useState<string>('SYNCHRONIZING SYSTEMS...');
 
   useEffect(() => {
@@ -19,38 +21,38 @@ const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0055ff] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0055ff]"></span>
               </span>
-              2025 European IT Standard
+              {t('hero.badge')}
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl lg:text-9xl leading-[0.9] uppercase heading tracking-tighter text-slate-900">
-              Future <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-emerald-500">Systems.</span>
+              {t('hero.title_prefix')} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-emerald-500">{t('hero.title_suffix')}</span>
             </h1>
-            
+
             <p className="max-w-2xl text-xl md:text-2xl text-slate-500 font-light leading-relaxed">
-              We architect resilient, high-performance IT ecosystems for global leaders. Engineering clarity for the complex digital landscape.
+              {t('hero.description')}
             </p>
           </div>
-          
+
           <div className="lg:col-span-4 lg:pl-12">
             <div className="p-8 glass-card rounded-3xl space-y-8">
               <div className="space-y-4">
-                <div className="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Market Intelligence Feed</div>
+                <div className="text-[10px] font-bold uppercase text-slate-400 tracking-widest">{t('hero.market_intelligence')}</div>
                 <p className="text-sm text-slate-700 leading-relaxed font-medium italic">
                   "{signal}"
                 </p>
               </div>
-              
+
               <div className="h-px bg-slate-100" />
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <div className="text-3xl font-bold heading text-[#0055ff]">99.99</div>
-                  <div className="text-[9px] font-bold uppercase text-slate-400 tracking-widest">Core Uptime</div>
+                  <div className="text-[9px] font-bold uppercase text-slate-400 tracking-widest">{t('hero.core_uptime')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold heading text-slate-900">4.0.2</div>
-                  <div className="text-[9px] font-bold uppercase text-slate-400 tracking-widest">System Revision</div>
+                  <div className="text-[9px] font-bold uppercase text-slate-400 tracking-widest">{t('hero.system_revision')}</div>
                 </div>
               </div>
             </div>

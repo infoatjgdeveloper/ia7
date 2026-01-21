@@ -1,0 +1,117 @@
+{
+    "navbar": {
+        "services": "Dienstleistungen",
+        "rd_lab": "F&E Labor",
+        "inquiry": "Anfrage"
+    },
+    "hero": {
+        "badge": "2025 Europäischer IT-Standard",
+        "title_prefix": "Zukunfts",
+        "title_suffix": "Systeme.",
+        "description": "Wir entwerfen widerstandsfähige, leistungsstarke IT-Ökosysteme für globale Marktführer. Technische Klarheit für die komplexe digitale Landschaft.",
+        "market_intelligence": "Marktintelligenz-Feed",
+        "core_uptime": "Kern-Betriebszeit",
+        "system_revision": "Systemrevision"
+    },
+    "footer": {
+        "description": "Elite IT-Beratung & Softwarearchitektur. Wir bedienen die Europäische Union mit hochpräzisen digitalen Systemen.",
+        "capabilities": "Fähigkeiten",
+        "web_development": "Webentwicklung",
+        "cloud_computing": "Cloud Computing",
+        "cybersecurity": "Cybersicherheit",
+        "ai_ml": "KI/ML",
+        "ai_training": "KI-Training",
+        "protocol_feed": "Protokoll-Feed",
+        "email_placeholder": "Briefing-E-Mail",
+        "join": "Beitreten",
+        "contact_details": "Kontaktdaten",
+        "copyright": "© 2026 IA7 GLOBAL TECH GMBH. ALLE SYSTEME BETRIEBSBEREIT.",
+        "privacy_policy": "Datenschutzerklärung (DSGVO)",
+        "impressum": "Impressum",
+        "terms": "Allgemeine Geschäftsbedingungen",
+        "cancellation": "Widerrufsbelehrung",
+        "faq": "FAQ"
+    },
+    "services": {
+        "core_capabilities": "Kernkompetenzen",
+        "title_prefix": "Präzisions",
+        "title_suffix": "Dienstleistungen.",
+        "detailed_inquiry": "Detaillierte Anfrage",
+        "items": {
+            "development": {
+                "title": "Web-App-Entwicklung",
+                "desc": "Architektur hochleistungsfähiger, skalierbarer Webanwendungen unter Verwendung modernster Headless-Stacks und Edge-Computing."
+            },
+            "infrastructure": {
+                "title": "Cloud Computing",
+                "desc": "Souveräne Cloud-Strategien, Migration und FinOps-Optimierung in sicheren europäischen Infrastrukturumgebungen."
+            },
+            "security": {
+                "title": "Cybersicherheit",
+                "desc": "Zero-Trust-Architektur, NIS2-Compliance-Auditing und proaktive Bedrohungsanalyse zum Schutz kritischer Assets."
+            },
+            "intelligence": {
+                "title": "KI/ML",
+                "desc": "Einsatz proprietärer neuronaler Architekturen, RAG-Systeme und Integration benutzerdefinierter Modelle für Unternehmenslogik."
+            },
+            "education": {
+                "title": "KI-Training",
+                "desc": "Spezialisierte Schulungsprogramme für technische Teams zur Beherrschung von LLM-Orchestrierung und ethischen KI-Bereitstellungsprotokollen."
+            }
+        }
+    },
+    "partner": {
+        "badge": "Strategische Forschung",
+        "title_prefix": "Das F&E",
+        "title_suffix": "Protokoll.",
+        "description_prefix": "IA7 Global Tech agiert als",
+        "description_highlight": "Autorisierter Partner der JG AI Research and Development Pvt Ltd",
+        "description_suffix": ". Wir bringen proprietäre neuronale Technologien in die industrielle Produktion.",
+        "accreditation": "Akkreditierung",
+        "tier": "TIER-1 ELITE",
+        "verification_id": "Verifikations-ID",
+        "verified_partner": "Verifizierter Partner",
+        "company_name": "JG AI R&D PVT LTD",
+        "role": "Autorisierter Implementierungsknoten"
+    },
+    "cta": {
+        "badge": "Engagement Initiieren",
+        "title_prefix": "Bereit für",
+        "title_suffix": "Briefing?",
+        "description": "Unsere leitenden Berater stehen bereit, um Ihre Systemmigration 2026 zu planen. Hochpräzise Strategie für Elite-Operationen.",
+        "button": "Strategieknoten Kontaktieren"
+    },
+    "faq_page": {
+        "back_home": "Zurück zur Startseite",
+        "title_prefix": "Häufig gestellte",
+        "title_suffix": "Fragen",
+        "subtitle": "Häufige Fragen zu unseren Dienstleistungen",
+        "intro": "Finden Sie Antworten auf die häufigsten Fragen zu den Dienstleistungen und Prozessen von IA7 Global Tech und wie wir mit unseren Kunden und technischen Partnern zusammenarbeiten.",
+        "still_questions": "Noch Fragen?",
+        "contact_text": "Wenn Sie weitere Fragen haben oder mehr Informationen über unsere Dienstleistungen benötigen, zögern Sie bitte nicht, unser Team zu kontaktieren.",
+        "email_us": "E-Mail schreiben",
+        "call_us": "Anrufen",
+        "items": [
+            {
+                "question": "Erledigen Sie alle Entwicklungsarbeiten intern?",
+                "answer": "Nein. IA7 Global Tech fungiert als Ihr einziger Ansprechpartner. Die technische Arbeit wird von erfahrenen externen Spezialisten durchgeführt, die von IA7 Global Tech koordiniert und verwaltet werden, um hohe Qualität zu gewährleisten."
+            },
+            {
+                "question": "Wo befinden sich Ihre technischen Teams?",
+                "answer": "Technische Dienstleistungen können von Partnern außerhalb der EU unter strengen Datenschutz- und Qualitätsstandards erbracht werden. IA7 Global Tech bleibt Ihr Vertragspartner."
+            },
+            {
+                "question": "Wie gehen Sie mit meinen persönlichen oder geschäftlichen Daten um?",
+                "answer": "Ihre Daten werden gemäß unserer Datenschutzerklärung DSGVO-konform behandelt, einschließlich etwaiger Übermittlungen an Nicht-EU-Partner."
+            },
+            {
+                "question": "Wie kann ich Änderungen an meinem Projekt anfordern?",
+                "answer": "Projektänderungen können jederzeit angefordert werden. IA7 Global Tech wird sich mit unseren technischen Partnern abstimmen und einen überarbeiteten Zeitplan oder ein Angebot vorlegen."
+            },
+            {
+                "question": "Was passiert, wenn ich mit dem Service nicht zufrieden bin?",
+                "answer": "IA7 Global Tech pflegt während des gesamten Projekts eine offene Kommunikation. Wenn Probleme auftreten, werden wir diese direkt ansprechen und bei Bedarf mit externen Partnern zusammenarbeiten, um sie zu lösen."
+            }
+        ]
+    }
+}
