@@ -1,0 +1,117 @@
+{
+    "navbar": {
+        "services": "Services",
+        "rd_lab": "R&D Lab",
+        "inquiry": "Inquiry"
+    },
+    "hero": {
+        "badge": "2025 European IT Standard",
+        "title_prefix": "Future",
+        "title_suffix": "Systems.",
+        "description": "We architect resilient, high-performance IT ecosystems for global leaders. Engineering clarity for the complex digital landscape.",
+        "market_intelligence": "Market Intelligence Feed",
+        "core_uptime": "Core Uptime",
+        "system_revision": "System Revision"
+    },
+    "footer": {
+        "description": "Elite IT Consultancy & Software Architecture. Serving the European Union with high-precision digital systems.",
+        "capabilities": "Capabilities",
+        "web_development": "Web Development",
+        "cloud_computing": "Cloud Computing",
+        "cybersecurity": "Cybersecurity",
+        "ai_ml": "AI/ML",
+        "ai_training": "AI Training",
+        "protocol_feed": "Protocol Feed",
+        "email_placeholder": "Briefing Email",
+        "join": "Join",
+        "contact_details": "Contact Details",
+        "copyright": "© 2026 IA7 GLOBAL TECH GMBH. ALL SYSTEMS OPERATIONAL.",
+        "privacy_policy": "Privacy Policy (GDPR)",
+        "impressum": "Impressum",
+        "terms": "Terms & Conditions",
+        "cancellation": "Cancellation Policy",
+        "faq": "FAQ"
+    },
+    "services": {
+        "core_capabilities": "Core Capabilities",
+        "title_prefix": "Precision",
+        "title_suffix": "Services.",
+        "detailed_inquiry": "Detailed Inquiry",
+        "items": {
+            "development": {
+                "title": "Web App Development",
+                "desc": "Architecting high-performance, scalable web applications using cutting-edge headless stacks and edge computing."
+            },
+            "infrastructure": {
+                "title": "Cloud Computing",
+                "desc": "Sovereign cloud strategies, migration, and FinOps optimization within secure European infrastructure environments."
+            },
+            "security": {
+                "title": "Cybersecurity",
+                "desc": "Zero-trust architecture, NIS2 compliance auditing, and proactive threat intelligence to shield critical assets."
+            },
+            "intelligence": {
+                "title": "AI/ML",
+                "desc": "Deployment of proprietary neural architectures, RAG systems, and custom model integration for enterprise logic."
+            },
+            "education": {
+                "title": "AI Training",
+                "desc": "Specialized training programs for technical teams to master LLM orchestration and ethical AI deployment protocols."
+            }
+        }
+    },
+    "partner": {
+        "badge": "Strategic Research",
+        "title_prefix": "The R&D",
+        "title_suffix": "Protocol.",
+        "description_prefix": "IA7 Global Tech acts as an",
+        "description_highlight": "Authorized Partner of JG AI Research and Development Pvt Ltd",
+        "description_suffix": ". We bring proprietary neural technologies to industrial production.",
+        "accreditation": "Accreditation",
+        "tier": "TIER-1 ELITE",
+        "verification_id": "Verification ID",
+        "verified_partner": "Verified Partner",
+        "company_name": "JG AI R&D PVT LTD",
+        "role": "Authorized Implementation Node"
+    },
+    "cta": {
+        "badge": "Initiate Engagement",
+        "title_prefix": "Ready for",
+        "title_suffix": "Briefing?",
+        "description": "Our lead consultants are standing by to architect your 2026 systems migration. High-precision strategy for elite operations.",
+        "button": "Contact Strategy Node"
+    },
+    "faq_page": {
+        "back_home": "Back to Home",
+        "title_prefix": "Frequently Asked",
+        "title_suffix": "Questions",
+        "subtitle": "Common Questions About Our Services",
+        "intro": "Find answers to the most common questions about IA7 Global Tech's services, processes, and how we work with our clients and technical partners.",
+        "still_questions": "Still Have Questions?",
+        "contact_text": "If you have additional questions or need more information about our services, please don't hesitate to reach out to our team.",
+        "email_us": "Email Us",
+        "call_us": "Call Us",
+        "items": [
+            {
+                "question": "Do you do all the development work in-house?",
+                "answer": "No. IA7 Global Tech acts as your single point of contact. The technical work is performed by experienced external specialists, coordinated and managed by IA7 Global Tech to ensure high quality."
+            },
+            {
+                "question": "Where are your technical teams located?",
+                "answer": "Technical services may be provided by partners outside the EU, under strict data protection and quality standards. IA7 Global Tech remains your contractual partner."
+            },
+            {
+                "question": "How do you handle my personal or business data?",
+                "answer": "Your data is handled according to our Privacy Policy, GDPR-compliant, including any transfers to non-EU partners."
+            },
+            {
+                "question": "How can I request changes to my project?",
+                "answer": "Project modifications can be requested at any time. IA7 Global Tech will coordinate with our technical partners and provide a revised timeline or quotation."
+            },
+            {
+                "question": "What happens if I'm not satisfied with the service?",
+                "answer": "IA7 Global Tech maintains open communication throughout the project. If issues arise, we will address them directly, and if necessary, work with external partners to resolve them."
+            }
+        ]
+    }
+}
