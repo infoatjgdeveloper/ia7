@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <footer className="pt-24 pb-12 px-6 bg-white border-t border-slate-100">
+    <footer className="pt-16 md:pt-24 pb-12 px-6 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
           <div className="space-y-6">

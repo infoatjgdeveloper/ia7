@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 const PartnerSection: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section id="partner" className="py-32 px-6 bg-white">
+    <section id="partner" className="py-20 md:py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-slate-900 rounded-[48px] p-12 md:p-24 relative overflow-hidden group">
+        <div className="bg-slate-900 rounded-[48px] p-6 md:p-12 lg:p-24 relative overflow-hidden group">
           {/* Subtle Grid Overlay */}
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
             style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -16,7 +16,7 @@ const PartnerSection: React.FC = () => {
             <div className="space-y-12">
               <div className="space-y-6">
                 <div className="inline-block px-4 py-1.5 border border-white/10 text-[10px] font-black uppercase tracking-[0.3em] text-[#0055ff] rounded-full">{t('partner.badge')}</div>
-                <h2 className="text-5xl md:text-7xl font-black heading uppercase leading-[0.9] text-white">
+                <h2 className="text-3xl md:text-5xl lg:text-7xl font-black heading uppercase leading-[0.9] text-white">
                   {t('partner.title_prefix')} <br />
                   <span className="text-slate-500">{t('partner.title_suffix')}</span>
                 </h2>
