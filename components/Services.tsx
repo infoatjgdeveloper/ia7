@@ -41,11 +41,11 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-32 px-6 bg-[#f9fafb]">
+    <section id="services" className="py-20 md:py-32 px-6 bg-[#f9fafb]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-24 space-y-4">
           <div className="text-[11px] font-black text-[#0055ff] tracking-[0.3em] uppercase">{t('services.core_capabilities')}</div>
-          <h2 className="text-5xl md:text-7xl heading uppercase text-slate-900">{t('services.title_prefix')} <br />{t('services.title_suffix')}</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-7xl heading uppercase text-slate-900">{t('services.title_prefix')} <br />{t('services.title_suffix')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

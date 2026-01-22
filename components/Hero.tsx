@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative pt-40 pb-24 px-6 hero-gradient min-h-[85vh] flex items-center">
+    <section className="relative pt-32 md:pt-40 pb-24 px-6 hero-gradient min-h-[85vh] flex items-center">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-8 space-y-10">
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
               {t('hero.badge')}
             </div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-9xl leading-[0.9] uppercase heading tracking-tighter text-slate-900">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-9xl leading-[0.9] uppercase heading tracking-tighter text-slate-900">
               {t('hero.title_prefix')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-emerald-500">{t('hero.title_suffix')}</span>
             </h1>

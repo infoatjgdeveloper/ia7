@@ -32,12 +32,12 @@ const HomePage: React.FC = () => {
             <PartnerSection />
 
             {/* Strategic CTA */}
-            <section className="py-48 px-6 bg-[#0f172a] text-white relative overflow-hidden" id="consult">
+            <section className="py-24 md:py-48 px-6 bg-[#0f172a] text-white relative overflow-hidden" id="consult">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-[#0055ff]/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
                 <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
                     <div className="text-[10px] font-black uppercase tracking-[0.5em] text-[#0055ff]">{t('cta.badge')}</div>
-                    <h2 className="text-5xl md:text-8xl heading uppercase leading-[0.9] tracking-tighter">
+                    <h2 className="text-4xl md:text-6xl lg:text-8xl heading uppercase leading-[0.9] tracking-tighter">
                         {t('cta.title_prefix')} <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-emerald-400">{t('cta.title_suffix')}</span>
                     </h2>
