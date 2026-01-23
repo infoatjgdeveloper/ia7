@@ -113,5 +113,181 @@
                 "answer": "IA7 Global Tech maintains open communication throughout the project. If issues arise, we will address them directly, and if necessary, work with external partners to resolve them."
             }
         ]
+    },
+    "impressum_page": {
+        "back_home": "Back to Home",
+        "title_prefix": "Impressum /",
+        "title_suffix": "Imprint",
+        "meta_title": "Impressum / Imprint | IA7 Global Tech",
+        "subtitle": "Legal Notice According to German Law (§5 TMG)",
+        "company_info": {
+            "title": "Company Information",
+            "brand_of": "(Brand of)",
+            "address_label": "Address",
+            "director_label": "Managing Director",
+            "contact_label": "Contact"
+        },
+        "legal_info": {
+            "title": "Legal Information",
+            "legal_form": "Legal Form",
+            "register_court": "Register Court",
+            "hrb_number": "HRB Number",
+            "vat_id": "VAT ID"
+        },
+        "disclaimer": {
+            "title": "Disclaimer",
+            "notice_title": "Important Notice",
+            "item1": "IA7 Global Tech is the contractual partner; technical work is delivered by external partners",
+            "item2": "Not liable for failures caused by subcontractors, hosting providers, or third-party services",
+            "item3": "Content for informational purposes only; external links outside our control"
+        },
+        "compliance": {
+            "title": "Legal Compliance",
+            "text": "This Impressum complies with German legal requirements under §5 TMG (Telemediengesetz) and §55 RStV (Rundfunkstaatsvertrag). For any legal inquiries or concerns, please contact us at"
+        }
+    },
+    "terms_page": {
+        "back_home": "Back to Home",
+        "title_prefix": "Terms &",
+        "title_suffix": "Conditions",
+        "meta_title": "Terms & Conditions | IA7 Global Tech",
+        "subtitle": "Allgemeine Geschäftsbedingungen (AGB)",
+        "effective_date": "Effective Date: January 2026",
+        "sections": {
+            "1": {
+                "title": "1. Scope and Applicability",
+                "content": {
+                    "1": "These Terms and Conditions govern all contractual relationships between IA7 Global Tech (brand of IA7 Global Trading UG (haftungsbeschränkt), Germany) and its clients.",
+                    "2": "By engaging our services, the client agrees to these Terms and Conditions. Any conflicting terms proposed by the client are explicitly rejected unless confirmed in writing by IA7 Global Tech.",
+                    "3": "IA7 Global Tech acts as the exclusive contractual partner for all services. The technical execution of IT services is performed by subcontractors, including partners located outside the European Union (e.g., JGdeveloper, India)."
+                }
+            },
+            "2": {
+                "title": "2. Definition of Services",
+                "content": {
+                    "1": "IA7 Global Tech provides project management, coordination, and facilitation of IT solutions, including software development, technical support, and consulting.",
+                    "2": "All technical work, coding, and implementation are performed by external subcontractors. IA7 Global Tech is not a development company and does not execute technical services in-house.",
+                    "3": "The services include, but are not limited to:",
+                    "list": {
+                        "1": "Requirement analysis and project specification",
+                        "2": "Coordination of development teams",
+                        "3": "Quality assurance and delivery of completed projects",
+                        "4": "Client communication and reporting"
+                    }
+                }
+            },
+            "3": {
+                "title": "3. Client Responsibilities",
+                "content": {
+                    "1": "The client must provide all required information, documents, and access in a timely manner.",
+                    "2": "Delays or missing information from the client may result in postponed delivery dates, without IA7 Global Tech being liable for such delays.",
+                    "3": "Clients must comply with all applicable laws in connection with the services."
+                }
+            },
+            "4": {
+                "title": "4. Contracts and Offers",
+                "content": {
+                    "1": "Offers are non-binding unless explicitly stated otherwise.",
+                    "2": "Contracts are concluded only after written confirmation by IA7 Global Tech.",
+                    "3": "IA7 Global Tech reserves the right to refuse contracts without giving reasons."
+                }
+            },
+            "5": {
+                "title": "5. Fees and Payment Terms",
+                "content": {
+                    "1": "Fees are specified in the respective quotation or service agreement.",
+                    "2": "Payments are due within 14 days of the invoice date unless otherwise agreed in writing.",
+                    "3": "Late payments incur interest of 5% above the base rate and IA7 Global Tech may suspend services until payment is received.",
+                    "4": "All fees are invoiced by IA7 Global Trading UG, regardless of subcontractors involved."
+                }
+            },
+            "6": {
+                "title": "6. Intellectual Property and Ownership",
+                "content": {
+                    "1": "All intellectual property created by subcontractors in the course of the project is transferred to the client only after full payment.",
+                    "2": "IA7 Global Tech reserves the right to display anonymized work for marketing purposes.",
+                    "3": "Clients may not use IA7 Global Tech or subcontractor materials outside the agreed scope without written consent."
+                }
+            },
+            "7": {
+                "title": "7. Liability",
+                "content": {
+                    "1": "IA7 Global Tech acts solely as contractual coordinator. Liability for technical implementation lies primarily with subcontractors.",
+                    "2": "IA7 Global Tech's liability is limited to intentional misconduct and gross negligence. Liability for indirect damages, lost profits, or business interruption is excluded to the maximum extent permitted by law.",
+                    "3": "IA7 Global Tech is not liable for delays or failures caused by:",
+                    "list": {
+                        "1": "Subcontractors",
+                        "2": "Third-party providers, APIs, or hosting",
+                        "3": "Force majeure"
+                    }
+                }
+            },
+            "8": {
+                "title": "8. Data Protection",
+                "content": {
+                    "1": "Personal data provided by the client will be processed in accordance with our Privacy Policy.",
+                    "2": "Client data may be transferred to subcontractors in India under GDPR-compliant safeguards (e.g., Standard Contractual Clauses)."
+                }
+            },
+            "9": {
+                "title": "9. Confidentiality",
+                "content": {
+                    "1": "All business information, project data, and technical specifications shared between client and IA7 Global Tech are confidential.",
+                    "2": "Confidentiality obligations continue for 5 years after the completion of services."
+                }
+            },
+            "10": {
+                "title": "10. Governing Law and Jurisdiction",
+                "content": {
+                    "1": "All contracts are governed by German law.",
+                    "2": "Exclusive jurisdiction for all disputes arising from these Terms and Conditions is the competent court in Berlin, Germany."
+                }
+            },
+            "11": {
+                "title": "11. Final Provisions",
+                "content": {
+                    "1": "Amendments or additions to these Terms require written form.",
+                    "2": "Should individual provisions of these Terms be invalid, the validity of remaining provisions remains unaffected."
+                }
+            }
+        }
+    },
+    "cancellation_page": {
+        "back_home": "Back to Home",
+        "title_prefix": "Service",
+        "title_suffix": "Cancellation",
+        "meta_title": "Service Cancellation | IA7 Global Tech",
+        "subtitle": "Cancellation and Termination Policy",
+        "intro": "This policy outlines the terms and conditions for service cancellation and contract termination between IA7 Global Tech and its clients. All cancellation terms are subject to written confirmation in the service agreement.",
+        "effective_date": "Effective Date: January 2026",
+        "sections": {
+            "1": {
+                "title": "1. Contract Cancellation by Client",
+                "list": {
+                    "1": "Pre-Project Cancellation: Clients may cancel services prior to project start without penalty.",
+                    "2": "Post-Commencement Cancellation: Once work has commenced, cancellation requires written notice. Fees may apply for work already completed."
+                }
+            },
+            "2": {
+                "title": "2. Contract Termination by IA7 Global Tech",
+                "intro": "IA7 Global Tech reserves the right to terminate a contract under the following circumstances:",
+                "list": {
+                    "1": "Non-Payment: Failure to make payments according to agreed terms and schedule.",
+                    "2": "Breach of Obligations: Client's failure to fulfill contractual obligations or provide required information and resources.",
+                    "3": "Force Majeure: Circumstances beyond reasonable control that prevent service delivery."
+                }
+            },
+            "3": {
+                "title": "3. Refunds",
+                "content": {
+                    "1": "Non-Refundable Services: Fees paid for completed work or services already rendered are non-refundable."
+                },
+                "notice": "Important Notice: All refund requests will be evaluated on a case-by-case basis in accordance with the specific terms outlined in your service agreement."
+            }
+        },
+        "confirmation": {
+            "title": "Written Confirmation Required",
+            "text": "All cancellation terms are subject to written confirmation in the service agreement. For any questions regarding cancellation or termination, please contact our team at"
+        }
     }
 }

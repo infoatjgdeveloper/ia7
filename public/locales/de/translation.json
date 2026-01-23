@@ -113,5 +113,181 @@
                 "answer": "IA7 Global Tech pflegt während des gesamten Projekts eine offene Kommunikation. Wenn Probleme auftreten, werden wir diese direkt ansprechen und bei Bedarf mit externen Partnern zusammenarbeiten, um sie zu lösen."
             }
         ]
+    },
+    "impressum_page": {
+        "back_home": "Zurück zur Startseite",
+        "title_prefix": "Impressum /",
+        "title_suffix": "Imprint",
+        "meta_title": "Impressum / Imprint | IA7 Global Tech",
+        "subtitle": "Rechtliche Hinweise gemäß §5 TMG",
+        "company_info": {
+            "title": "Unternehmensinformationen",
+            "brand_of": "(Marke der)",
+            "address_label": "Adresse",
+            "director_label": "Geschäftsführer",
+            "contact_label": "Kontakt"
+        },
+        "legal_info": {
+            "title": "Rechtliche Informationen",
+            "legal_form": "Rechtsform",
+            "register_court": "Registergericht",
+            "hrb_number": "HRB-Nummer",
+            "vat_id": "USt-IdNr."
+        },
+        "disclaimer": {
+            "title": "Haftungsausschluss",
+            "notice_title": "Wichtiger Hinweis",
+            "item1": "IA7 Global Tech ist Vertragspartner; technische Leistungen werden durch externe Partner erbracht",
+            "item2": "Keine Haftung für Ausfälle durch Subunternehmer, Hosting-Provider oder Drittanbieter",
+            "item3": "Inhalte dienen nur zu Informationszwecken; externe Links liegen außerhalb unserer Kontrolle"
+        },
+        "compliance": {
+            "title": "Rechtliche Konformität",
+            "text": "Dieses Impressum entspricht den deutschen gesetzlichen Anforderungen gemäß §5 TMG (Telemediengesetz) und §55 RStV (Rundfunkstaatsvertrag). Für rechtliche Anfragen oder Bedenken kontaktieren Sie uns bitte unter"
+        }
+    },
+    "terms_page": {
+        "back_home": "Zurück zur Startseite",
+        "title_prefix": "Allgemeine",
+        "title_suffix": "Geschäftsbedingungen",
+        "meta_title": "Allgemeine Geschäftsbedingungen | IA7 Global Tech",
+        "subtitle": "Terms & Conditions (AGB)",
+        "effective_date": "Datum des Inkrafttretens: Januar 2026",
+        "sections": {
+            "1": {
+                "title": "1. Geltungsbereich und Anwendbarkeit",
+                "content": {
+                    "1": "Diese Allgemeinen Geschäftsbedingungen regeln alle vertraglichen Beziehungen zwischen IA7 Global Tech (Marke der IA7 Global Trading UG (haftungsbeschränkt), Deutschland) und ihren Kunden.",
+                    "2": "Durch die Beauftragung unserer Dienstleistungen stimmt der Kunde diesen Allgemeinen Geschäftsbedingungen zu. Entgegenstehende Bedingungen des Kunden werden ausdrücklich zurückgewiesen, sofern sie nicht schriftlich von IA7 Global Tech bestätigt wurden.",
+                    "3": "IA7 Global Tech fungiert als exklusiver Vertragspartner für alle Dienstleistungen. Die technische Ausführung von IT-Dienstleistungen erfolgt durch Subunternehmer, einschließlich Partnern außerhalb der Europäischen Union (z. B. JGdeveloper, Indien)."
+                }
+            },
+            "2": {
+                "title": "2. Definition der Dienstleistungen",
+                "content": {
+                    "1": "IA7 Global Tech bietet Projektmanagement, Koordination und Bereitstellung von IT-Lösungen, einschließlich Softwareentwicklung, technischem Support und Beratung.",
+                    "2": "Alle technischen Arbeiten, Codierung und Implementierung werden von externen Subunternehmern durchgeführt. IA7 Global Tech ist kein Entwicklungsunternehmen und führt keine technischen Dienstleistungen intern aus.",
+                    "3": "Die Dienstleistungen umfassen unter anderem:",
+                    "list": {
+                        "1": "Anforderungsanalyse und Projektspezifikation",
+                        "2": "Koordination von Entwicklungsteams",
+                        "3": "Qualitätssicherung und Lieferung abgeschlossener Projekte",
+                        "4": "Kundenkommunikation und Berichterstattung"
+                    }
+                }
+            },
+            "3": {
+                "title": "3. Pflichten des Kunden",
+                "content": {
+                    "1": "Der Kunde muss alle erforderlichen Informationen, Dokumente und Zugänge rechtzeitig bereitstellen.",
+                    "2": "Verzögerungen oder fehlende Informationen seitens des Kunden können zu verschobenen Lieferterminen führen, ohne dass IA7 Global Tech für solche Verzögerungen haftet.",
+                    "3": "Kunden müssen im Zusammenhang mit den Dienstleistungen alle geltenden Gesetze einhalten."
+                }
+            },
+            "4": {
+                "title": "4. Verträge und Angebote",
+                "content": {
+                    "1": "Angebote sind freibleibend, sofern nicht ausdrücklich anders angegeben.",
+                    "2": "Verträge kommen erst nach schriftlicher Bestätigung durch IA7 Global Tech zustande.",
+                    "3": "IA7 Global Tech behält sich das Recht vor, Verträge ohne Angabe von Gründen abzulehnen."
+                }
+            },
+            "5": {
+                "title": "5. Gebühren und Zahlungsbedingungen",
+                "content": {
+                    "1": "Gebühren sind im jeweiligen Angebot oder Dienstleistungsvertrag festgelegt.",
+                    "2": "Zahlungen sind innerhalb von 14 Tagen nach Rechnungsdatum fällig, sofern nicht schriftlich anders vereinbart.",
+                    "3": "Bei Zahlungsverzug werden Zinsen in Höhe von 5% über dem Basiszinssatz berechnet, und IA7 Global Tech kann die Dienstleistungen bis zum Zahlungseingang aussetzen.",
+                    "4": "Alle Gebühren werden von der IA7 Global Trading UG in Rechnung gestellt, unabhängig von den beteiligten Subunternehmern."
+                }
+            },
+            "6": {
+                "title": "6. Geistiges Eigentum und Eigentum",
+                "content": {
+                    "1": "Alle von Subunternehmern im Rahmen des Projekts erstellten geistigen Eigentumsrechte werden erst nach vollständiger Bezahlung an den Kunden übertragen.",
+                    "2": "IA7 Global Tech behält sich das Recht vor, anonymisierte Arbeiten zu Marketingzwecken anzuzeigen.",
+                    "3": "Kunden dürfen Materialien von IA7 Global Tech oder Subunternehmern nicht ohne schriftliche Zustimmung außerhalb des vereinbarten Umfangs verwenden."
+                }
+            },
+            "7": {
+                "title": "7. Haftung",
+                "content": {
+                    "1": "IA7 Global Tech fungiert ausschließlich als vertraglicher Koordinator. Die Haftung für die technische Umsetzung liegt primär bei den Subunternehmern.",
+                    "2": "Die Haftung von IA7 Global Tech ist auf Vorsatz und grobe Fahrlässigkeit beschränkt. Die Haftung für indirekte Schäden, entgangenen Gewinn oder Betriebsunterbrechung ist im gesetzlich zulässigen Umfang ausgeschlossen.",
+                    "3": "IA7 Global Tech haftet nicht für Verzögerungen oder Ausfälle verursacht durch:",
+                    "list": {
+                        "1": "Subunternehmer",
+                        "2": "Drittanbieter, APIs oder Hosting",
+                        "3": "Höhere Gewalt"
+                    }
+                }
+            },
+            "8": {
+                "title": "8. Datenschutz",
+                "content": {
+                    "1": "Vom Kunden bereitgestellte personenbezogene Daten werden gemäß unserer Datenschutzerklärung verarbeitet.",
+                    "2": "Kundendaten können unter Einhaltung der DSGVO-Schutzmaßnahmen (z. B. Standardvertragsklauseln) an Subunternehmer in Indien übermittelt werden."
+                }
+            },
+            "9": {
+                "title": "9. Vertraulichkeit",
+                "content": {
+                    "1": "Alle Geschäftsinformationen, Projektdaten und technischen Spezifikationen, die zwischen dem Kunden und IA7 Global Tech ausgetauscht werden, sind vertraulich.",
+                    "2": "Vertraulichkeitsverpflichtungen bestehen für 5 Jahre nach Abschluss der Dienstleistungen fort."
+                }
+            },
+            "10": {
+                "title": "10. Anwendbares Recht und Gerichtsstand",
+                "content": {
+                    "1": "Alle Verträge unterliegen deutschem Recht.",
+                    "2": "Ausschließlicher Gerichtsstand für alle Streitigkeiten aus diesen Allgemeinen Geschäftsbedingungen ist das zuständige Gericht in Berlin, Deutschland."
+                }
+            },
+            "11": {
+                "title": "11. Schlussbestimmungen",
+                "content": {
+                    "1": "Änderungen oder Ergänzungen dieser Bedingungen bedürfen der Schriftform.",
+                    "2": "Sollten einzelne Bestimmungen dieser Bedingungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+                }
+            }
+        }
+    },
+    "cancellation_page": {
+        "back_home": "Zurück zur Startseite",
+        "title_prefix": "Widerrufs",
+        "title_suffix": "belehrung",
+        "meta_title": "Widerrufsbelehrung | IA7 Global Tech",
+        "subtitle": "Stornierungs- und Kündigungsrichtlinie",
+        "intro": "Diese Richtlinie beschreibt die Bedingungen für die Stornierung von Dienstleistungen und die Vertragskündigung zwischen IA7 Global Tech und seinen Kunden. Alle Stornierungsbedingungen bedürfen der schriftlichen Bestätigung im Dienstleistungsvertrag.",
+        "effective_date": "Datum des Inkrafttretens: Januar 2026",
+        "sections": {
+            "1": {
+                "title": "1. Vertragsstornierung durch den Kunden",
+                "list": {
+                    "1": "Stornierung vor Projektbeginn: Kunden können Dienstleistungen vor Projektbeginn ohne Vertragsstrafe stornieren.",
+                    "2": "Stornierung nach Beginn: Sobald die Arbeit begonnen hat, erfordert die Stornierung eine schriftliche Mitteilung. Für bereits abgeschlossene Arbeiten können Gebühren anfallen."
+                }
+            },
+            "2": {
+                "title": "2. Vertragskündigung durch IA7 Global Tech",
+                "intro": "IA7 Global Tech behält sich das Recht vor, einen Vertrag unter folgenden Umständen zu kündigen:",
+                "list": {
+                    "1": "Nichtzahlung: Versäumnis, Zahlungen gemäß den vereinbarten Bedingungen und Zeitplänen zu leisten.",
+                    "2": "Verletzung von Pflichten: Versäumnis des Kunden, vertragliche Verpflichtungen zu erfüllen oder erforderliche Informationen und Ressourcen bereitzustellen.",
+                    "3": "Höhere Gewalt: Umstände außerhalb der angemessenen Kontrolle, die die Leistungserbringung verhindern."
+                }
+            },
+            "3": {
+                "title": "3. Rückerstattungen",
+                "content": {
+                    "1": "Nicht erstattungsfähige Dienstleistungen: Gebühren für abgeschlossene Arbeiten oder bereits erbrachte Dienstleistungen sind nicht erstattungsfähig."
+                },
+                "notice": "Wichtiger Hinweis: Alle Rückerstattungsanträge werden von Fall zu Fall gemäß den spezifischen Bedingungen Ihres Dienstleistungsvertrags geprüft."
+            }
+        },
+        "confirmation": {
+            "title": "Schriftliche Bestätigung Erforderlich",
+            "text": "Alle Stornierungsbedingungen bedürfen der schriftlichen Bestätigung im Dienstleistungsvertrag. Bei Fragen zu Stornierung oder Kündigung wenden Sie sich bitte an unser Team unter"
+        }
     }
 }

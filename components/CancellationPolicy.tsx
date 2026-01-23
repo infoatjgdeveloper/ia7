@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const CancellationPolicy: React.FC = () => {
+    const { t } = useTranslation();
+
+    React.useEffect(() => {
+        document.title = t('cancellation_page.meta_title');
+    }, [t]);
+
     return (
         <div className="min-h-screen bg-white">
             {/* Header with back button */}
@@ -14,13 +21,13 @@ const CancellationPolicy: React.FC = () => {
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
-                        Back to Home
+                        {t('cancellation_page.back_home')}
                     </Link>
                     <h1 className="text-4xl md:text-6xl heading uppercase leading-tight tracking-tighter">
-                        Service <span className="text-[#0055ff]">Cancellation</span>
+                        {t('cancellation_page.title_prefix')} <span className="text-[#0055ff]">{t('cancellation_page.title_suffix')}</span>
                     </h1>
                     <p className="text-sm text-slate-400 mt-4 font-medium uppercase tracking-wider">
-                        Cancellation and Termination Policy
+                        {t('cancellation_page.subtitle')}
                     </p>
                 </div>
             </div>
@@ -32,26 +39,22 @@ const CancellationPolicy: React.FC = () => {
                     {/* Introduction */}
                     <div className="mb-12 p-6 bg-slate-50 rounded-lg border border-slate-200">
                         <p className="text-slate-700 leading-relaxed font-medium">
-                            This policy outlines the terms and conditions for service cancellation and contract termination
-                            between IA7 Global Tech and its clients. All cancellation terms are subject to written confirmation
-                            in the service agreement.
+                            {t('cancellation_page.intro')}
                         </p>
                     </div>
 
                     {/* Section 1 */}
                     <section className="mb-12">
                         <h2 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-6 border-b-2 border-[#0055ff] pb-3">
-                            1. Contract Cancellation by Client
+                            {t('cancellation_page.sections.1.title')}
                         </h2>
                         <div className="space-y-4 text-slate-600 leading-relaxed">
                             <ul className="list-disc pl-8 space-y-3">
                                 <li>
-                                    <strong className="text-slate-900">Pre-Project Cancellation:</strong> Clients may cancel services
-                                    prior to project start without penalty.
+                                    {t('cancellation_page.sections.1.list.1')}
                                 </li>
                                 <li>
-                                    <strong className="text-slate-900">Post-Commencement Cancellation:</strong> Once work has commenced,
-                                    cancellation requires written notice. Fees may apply for work already completed.
+                                    {t('cancellation_page.sections.1.list.2')}
                                 </li>
                             </ul>
                         </div>
@@ -60,24 +63,21 @@ const CancellationPolicy: React.FC = () => {
                     {/* Section 2 */}
                     <section className="mb-12">
                         <h2 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-6 border-b-2 border-[#0055ff] pb-3">
-                            2. Contract Termination by IA7 Global Tech
+                            {t('cancellation_page.sections.2.title')}
                         </h2>
                         <div className="space-y-4 text-slate-600 leading-relaxed">
                             <p>
-                                IA7 Global Tech reserves the right to terminate a contract under the following circumstances:
+                                {t('cancellation_page.sections.2.intro')}
                             </p>
                             <ul className="list-disc pl-8 space-y-3">
                                 <li>
-                                    <strong className="text-slate-900">Non-Payment:</strong> Failure to make payments according to
-                                    agreed terms and schedule.
+                                    {t('cancellation_page.sections.2.list.1')}
                                 </li>
                                 <li>
-                                    <strong className="text-slate-900">Breach of Obligations:</strong> Client's failure to fulfill
-                                    contractual obligations or provide required information and resources.
+                                    {t('cancellation_page.sections.2.list.2')}
                                 </li>
                                 <li>
-                                    <strong className="text-slate-900">Force Majeure:</strong> Circumstances beyond reasonable control
-                                    that prevent service delivery.
+                                    {t('cancellation_page.sections.2.list.3')}
                                 </li>
                             </ul>
                         </div>
@@ -86,16 +86,14 @@ const CancellationPolicy: React.FC = () => {
                     {/* Section 3 */}
                     <section className="mb-12">
                         <h2 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-6 border-b-2 border-[#0055ff] pb-3">
-                            3. Refunds
+                            {t('cancellation_page.sections.3.title')}
                         </h2>
                         <div className="space-y-4 text-slate-600 leading-relaxed">
                             <p>
-                                <strong className="text-slate-900">Non-Refundable Services:</strong> Fees paid for completed work
-                                or services already rendered are non-refundable.
+                                {t('cancellation_page.sections.3.content.1')}
                             </p>
                             <p className="mt-4 p-4 bg-amber-50 border-l-4 border-amber-500 text-amber-900">
-                                <strong>Important Notice:</strong> All refund requests will be evaluated on a case-by-case basis
-                                in accordance with the specific terms outlined in your service agreement.
+                                {t('cancellation_page.sections.3.notice')}
                             </p>
                         </div>
                     </section>
@@ -103,11 +101,10 @@ const CancellationPolicy: React.FC = () => {
                     {/* Important Notice */}
                     <div className="mt-16 p-8 bg-[#0f172a] text-white rounded-lg">
                         <h3 className="text-xl font-black uppercase tracking-tight mb-4 text-[#0055ff]">
-                            Written Confirmation Required
+                            {t('cancellation_page.confirmation.title')}
                         </h3>
                         <p className="text-slate-300 leading-relaxed">
-                            All cancellation terms are subject to written confirmation in the service agreement.
-                            For any questions regarding cancellation or termination, please contact our team at{' '}
+                            {t('cancellation_page.confirmation.text')}{' '}
                             <a href="mailto:sales@ia7globaltech.eu" className="text-[#0055ff] hover:underline font-bold">
                                 sales@ia7globaltech.eu
                             </a>
@@ -117,7 +114,7 @@ const CancellationPolicy: React.FC = () => {
                     {/* Effective Date */}
                     <div className="mt-16 pt-8 border-t-2 border-slate-200">
                         <p className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                            Effective Date: January 2026
+                            {t('cancellation_page.effective_date')}
                         </p>
                     </div>
                 </div>
@@ -128,7 +125,7 @@ const CancellationPolicy: React.FC = () => {
                         to="/"
                         className="inline-block bg-[#0f172a] text-white px-12 py-4 rounded-full text-xs font-black uppercase tracking-[0.3em] hover:bg-[#0055ff] transition-all shadow-lg"
                     >
-                        Back to Home
+                        {t('cancellation_page.back_home')}
                     </Link>
                 </div>
             </div>
