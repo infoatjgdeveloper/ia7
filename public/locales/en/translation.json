@@ -5,16 +5,16 @@
         "inquiry": "Inquiry"
     },
     "hero": {
-        "badge": "2025 European IT Standard",
-        "title_prefix": "Future",
-        "title_suffix": "Systems.",
-        "description": "We architect resilient, high-performance IT ecosystems for global leaders. Engineering clarity for the complex digital landscape.",
+        "badge": "Enterprise IT Consulting & Solutions",
+        "title_prefix": "Future-Proof",
+        "title_suffix": "Software Systems.",
+        "description": "We architect resilient, high-performance custom software solutions and secure cloud infrastructure for global leaders. Engineering clarity for the complex digital landscape.",
         "market_intelligence": "Market Intelligence Feed",
         "core_uptime": "Core Uptime",
         "system_revision": "System Revision"
     },
     "footer": {
-        "description": "Elite IT Consultancy & Software Architecture. Serving the European Union with high-precision digital systems.",
+        "description": "Elite IT Consultancy, Custom Software Development & Cloud Architecture. Serving the global market with high-precision digital systems.",
         "capabilities": "Capabilities",
         "web_development": "Web Development",
         "cloud_computing": "Cloud Computing",
@@ -33,8 +33,8 @@
         "faq": "FAQ"
     },
     "services": {
-        "core_capabilities": "Core Capabilities",
-        "title_prefix": "Precision",
+        "core_capabilities": "Enterprise IT Solutions",
+        "title_prefix": "Bespoke Tech",
         "title_suffix": "Services.",
         "detailed_inquiry": "Detailed Inquiry",
         "items": {

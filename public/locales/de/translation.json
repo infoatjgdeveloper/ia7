@@ -5,16 +5,16 @@
         "inquiry": "Anfrage"
     },
     "hero": {
-        "badge": "2025 Europäischer IT-Standard",
-        "title_prefix": "Zukunfts",
-        "title_suffix": "Systeme.",
-        "description": "Wir entwerfen widerstandsfähige, leistungsstarke IT-Ökosysteme für globale Marktführer. Technische Klarheit für die komplexe digitale Landschaft.",
-        "market_intelligence": "Marktintelligenz-Feed",
+        "badge": "IT-Beratung für Unternehmen & Lösungen",
+        "title_prefix": "Zukunftssichere",
+        "title_suffix": "Software-Systeme.",
+        "description": "Wir entwerfen widerstandsfähige, maßgeschneiderte Softwarelösungen und sichere Cloud-Infrastrukturen für globale Marktführer. Technische Klarheit für die komplexe digitale Landschaft.",
+        "market_intelligence": "Tech-Intelligenz-Feed",
         "core_uptime": "Kern-Betriebszeit",
         "system_revision": "Systemrevision"
     },
     "footer": {
-        "description": "Elite IT-Beratung & Softwarearchitektur. Wir bedienen die Europäische Union mit hochpräzisen digitalen Systemen.",
+        "description": "Elite IT-Beratung, individuelle Softwareentwicklung & Cloud-Architektur. Wir bedienen den globalen Markt mit hochpräzisen digitalen Systemen.",
         "capabilities": "Fähigkeiten",
         "web_development": "Webentwicklung",
         "cloud_computing": "Cloud Computing",
@@ -33,8 +33,8 @@
         "faq": "FAQ"
     },
     "services": {
-        "core_capabilities": "Kernkompetenzen",
-        "title_prefix": "Präzisions",
+        "core_capabilities": "Unternehmens-IT-Lösungen",
+        "title_prefix": "Maßgeschneiderte IT",
         "title_suffix": "Dienstleistungen.",
         "detailed_inquiry": "Detaillierte Anfrage",
         "items": {

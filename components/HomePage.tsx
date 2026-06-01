@@ -4,11 +4,13 @@ import Hero from './Hero';
 import PartnerSection from './PartnerSection';
 import Services from './Services';
 import Footer from './Footer';
+import SEOHead from './SEOHead';
 
 const HomePage: React.FC = () => {
     const { t } = useTranslation();
     return (
         <>
+            <SEOHead />
             <Hero />
 
             {/* Subtle Brand Marquee */}
