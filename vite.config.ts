@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        proxy: {
+          '/api/news': {
+            target: 'https://news.google.com',
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/api\/news/, '/rss/search'),
+          }
+        }
       },
       plugins: [react()],
       define: {

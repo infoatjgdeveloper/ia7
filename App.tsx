@@ -8,6 +8,7 @@ import CancellationPolicy from './components/CancellationPolicy';
 import FAQ from './components/FAQ';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Impressum from './components/Impressum';
+import ChatWidget from './components/ChatWidget';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
             <Route path="/impressum" element={<Impressum />} />
           </Routes>
         </main>
+        <ChatWidget />
       </div>
     </Router>
   );
