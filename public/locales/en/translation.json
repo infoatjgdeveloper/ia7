@@ -1,4 +1,19 @@
 {
+    "chat": {
+        "title": "IA7 AI Assistant",
+        "online": "Online",
+        "demo": "Demo",
+        "select_demo": "Select Agent Demo",
+        "cloud": "Cloud",
+        "web": "Web Development",
+        "security": "Cyber Security",
+        "ai_training": "AI & Training",
+        "other": "Other",
+        "welcome": "Hi there! How can I help you with IA7 Global Tech services and solutions today?",
+        "ask_placeholder": "Ask about IA7 Global...",
+        "error_api_key": "Error: API key is not configured. Please add VITE_GROQ_API_KEY to your .env.local file.",
+        "error_connection": "Sorry, I encountered an error connecting to the AI. Please check your API key or try again later."
+    },
     "navbar": {
         "services": "Services",
         "rd_lab": "R&D Lab",

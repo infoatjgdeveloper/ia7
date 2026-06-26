@@ -1,4 +1,19 @@
 {
+    "chat": {
+        "title": "IA7 KI-Assistent",
+        "online": "Online",
+        "demo": "Demo",
+        "select_demo": "Agenten-Demo auswählen",
+        "cloud": "Cloud",
+        "web": "Webentwicklung",
+        "security": "Cybersicherheit",
+        "ai_training": "KI & Schulung",
+        "other": "Sonstiges",
+        "welcome": "Hallo! Wie kann ich Ihnen heute bei den Dienstleistungen und Lösungen von IA7 Global Tech helfen?",
+        "ask_placeholder": "Fragen Sie nach IA7 Global...",
+        "error_api_key": "Fehler: Der API-Schlüssel ist nicht konfiguriert. Bitte fügen Sie VITE_GROQ_API_KEY zu Ihrer .env.local-Datei hinzu.",
+        "error_connection": "Es tut mir leid, beim Herstellen der Verbindung zur KI ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihren API-Schlüssel oder versuchen Sie es später noch einmal."
+    },
     "navbar": {
         "services": "Dienstleistungen",
         "rd_lab": "F&E Labor",
