@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <div className="text-3xl font-bold heading text-[#0055ff]">99.99</div>
+                  <div className="text-3xl font-bold heading text-[#0055ff]">100%</div>
                   <div className="text-[9px] font-bold uppercase text-slate-400 tracking-widest">{t('hero.core_uptime')}</div>
                 </div>
                 <div>

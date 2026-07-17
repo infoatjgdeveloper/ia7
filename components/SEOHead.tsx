@@ -12,8 +12,8 @@ interface SEOHeadProps {
 const SEOHead: React.FC<SEOHeadProps> = ({ 
   titleKey, 
   descriptionKey, 
-  defaultTitle = "IA7 Global Tech | Elite IT Systems",
-  defaultDescription = "We architect resilient, high-performance custom software solutions and secure cloud infrastructure for global leaders."
+  defaultTitle = "IA7 Global Tech | AI Solutions & Custom Software for Europe",
+  defaultDescription = "IA7 Global Tech builds custom software, AI tools, and web applications for businesses in Germany and Europe. DPIIT-recognized AI partnership."
 }) => {
   const { t } = useTranslation();
 

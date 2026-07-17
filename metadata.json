@@ -1,8 +1,5 @@
 {
-  "name": "IA7Global Tech - IT Services & Consultancy",
-  "description": "A high-end, futuristic landing page for IA7Global Tech, a premier global IT consultancy firm.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
+  "name": "IA7 Global Tech - AI Solutions & Custom Software",
+  "description": "IA7 Global Tech builds custom software and AI-powered solutions for businesses in Germany and Europe.",
+  "requestFramePermissions": []
 }

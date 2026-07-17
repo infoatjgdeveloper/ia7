@@ -20,16 +20,16 @@
         "inquiry": "Inquiry"
     },
     "hero": {
-        "badge": "AI Solutions & Custom Software for Europe",
-        "title_prefix": "Intelligent",
-        "title_suffix": "Software for Growing Businesses.",
-        "description": "IA7 Global Tech builds custom software, AI-powered tools, and web applications for businesses in Germany and across Europe — delivered with clarity, speed, and security.",
-        "market_intelligence": "Projects Delivered",
-        "core_uptime": "Client Satisfaction",
-        "system_revision": "Active Clients"
+        "badge": "Enterprise IT Consulting & Solutions",
+        "title_prefix": "Future-Proof",
+        "title_suffix": "Software Systems.",
+        "description": "We architect resilient, high-performance custom software solutions and secure cloud infrastructure for global leaders. Engineering clarity for the complex digital landscape.",
+        "market_intelligence": "Market Intelligence Feed",
+        "core_uptime": "Core Uptime",
+        "system_revision": "System Revision"
     },
     "footer": {
-        "description": "AI Solutions, Custom Software Development & IT Consulting for businesses in Germany and Europe. Built on real expertise, delivered with transparency.",
+        "description": "Elite IT Consultancy, Custom Software Development & Cloud Architecture. Serving the global market with high-precision digital systems.",
         "capabilities": "Capabilities",
         "web_development": "Web Development",
         "cloud_computing": "Cloud Computing",
@@ -40,7 +40,7 @@
         "email_placeholder": "Briefing Email",
         "join": "Join",
         "contact_details": "Contact Details",
-        "copyright": "© 2026 IA7 GLOBAL TRADING UG (haftungsbeschränkt). ALL RIGHTS RESERVED.",
+        "copyright": "© 2026 IA7 GLOBAL TECH GMBH. ALL SYSTEMS OPERATIONAL.",
         "privacy_policy": "Privacy Policy (GDPR)",
         "impressum": "Impressum",
         "terms": "Terms & Conditions",
@@ -48,53 +48,53 @@
         "faq": "FAQ"
     },
     "services": {
-        "core_capabilities": "Our Services",
-        "title_prefix": "What We",
-        "title_suffix": "Build for You.",
-        "detailed_inquiry": "Get in Touch",
+        "core_capabilities": "Enterprise IT Solutions",
+        "title_prefix": "Bespoke Tech",
+        "title_suffix": "Services.",
+        "detailed_inquiry": "Detailed Inquiry",
         "items": {
             "development": {
-                "title": "Web & App Development",
-                "desc": "Custom web applications, portals, and digital products built to your requirements — clean, fast, and maintainable."
+                "title": "Web App Development",
+                "desc": "Architecting high-performance, scalable web applications using cutting-edge headless stacks and edge computing."
             },
             "infrastructure": {
-                "title": "Cloud Setup & Support",
-                "desc": "Cloud deployment, hosting setup, and infrastructure management for growing businesses operating in Europe."
+                "title": "Cloud Computing",
+                "desc": "Sovereign cloud strategies, migration, and FinOps optimization within secure European infrastructure environments."
             },
             "security": {
-                "title": "Security-Aware Development",
-                "desc": "We build with security in mind from day one. For dedicated cybersecurity services, we work with our partner BRJU InfoSec Inc. (USA)."
+                "title": "Cybersecurity",
+                "desc": "Zero-trust architecture, NIS2 compliance auditing, and proactive threat intelligence to shield critical assets."
             },
             "intelligence": {
-                "title": "AI Integration & Automation",
-                "desc": "Custom AI tools, chatbots, RAG systems, and LLM integrations that actually solve real business problems — no buzzwords."
+                "title": "AI/ML",
+                "desc": "Deployment of proprietary neural architectures, RAG systems, and custom model integration for enterprise logic."
             },
             "education": {
-                "title": "AI Training & Workshops",
-                "desc": "Practical training for your team on using AI tools effectively — from prompt engineering to deploying AI in your workflows."
+                "title": "AI Training",
+                "desc": "Specialized training programs for technical teams to master LLM orchestration and ethical AI deployment protocols."
             }
         }
     },
     "partner": {
-        "badge": "Our R&D Partner",
-        "title_prefix": "Powered by",
-        "title_suffix": "JG AI R&D.",
-        "description_prefix": "IA7 Global Tech is the European arm of",
-        "description_highlight": "JG AI Research and Development Pvt. Ltd.",
-        "description_suffix": " — a DPIIT-recognized AI startup based in India. Together we build AI-powered solutions for clients across Europe and India.",
-        "accreditation": "Recognition",
-        "tier": "DPIIT RECOGNIZED",
-        "verification_id": "Partnership",
-        "verified_partner": "European Partner",
-        "company_name": "JG AI R&D PVT. LTD.",
-        "role": "AI Solutions for Europe"
+        "badge": "Strategic Research",
+        "title_prefix": "The R&D",
+        "title_suffix": "Protocol.",
+        "description_prefix": "IA7 Global Tech acts as an",
+        "description_highlight": "Authorized Partner of JG AI Research and Development Pvt Ltd",
+        "description_suffix": ". We bring proprietary neural technologies to industrial production.",
+        "accreditation": "Accreditation",
+        "tier": "TIER-1 ELITE",
+        "verification_id": "Verification ID",
+        "verified_partner": "Verified Partner",
+        "company_name": "JG AI R&D PVT LTD",
+        "role": "Authorized Implementation Node"
     },
     "cta": {
-        "badge": "Get in Touch",
-        "title_prefix": "Ready to",
-        "title_suffix": "Start a Project?",
-        "description": "Tell us what you're building and we'll give you a straight answer on how we can help. No buzzwords, no unnecessary complexity.",
-        "button": "Contact Us"
+        "badge": "Initiate Engagement",
+        "title_prefix": "Ready for",
+        "title_suffix": "Briefing?",
+        "description": "Our lead consultants are standing by to architect your 2026 systems migration. High-precision strategy for elite operations.",
+        "button": "Contact Strategy Node"
     },
     "faq_page": {
         "back_home": "Back to Home",
