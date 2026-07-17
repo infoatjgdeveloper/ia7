@@ -2,146 +2,123 @@ import React from 'react';
 
 const entities = [
   {
-    name: "JG AI R&D",
-    fullName: "JG AI Research & Development Pvt. Ltd.",
-    country: "India 🇮🇳",
-    role: "HQ & R&D Backbone",
-    description: "DPIIT-recognized AI startup powering all three entities. Builds custom LLMs, AI agents, RAG systems, and automation tools deployed across 37+ countries.",
-    link: "https://www.jgdeveloper.com",
-    linkLabel: "jgdeveloper.com",
-    color: "#0055ff",
-    lightBg: "#EEF4FF",
-    tags: ["AI Agents", "LLM Development", "RAG Systems", "Web & App Dev"],
-    badge: "DPIIT Recognized",
+    flag: '🇮🇳',
+    name: 'JG AI R&D',
+    legal: 'JG AI Research & Development Pvt. Ltd.',
+    location: 'Ahmedabad, India',
+    role: 'R&D Backbone & HQ',
+    desc: 'DPIIT-recognized AI startup. Builds all custom AI agents, LLMs, RAG systems, and web applications powering the group\'s products across 37+ countries.',
+    link: 'https://www.jgdeveloper.com',
+    badge: 'DPIIT Recognized',
+    tags: ['AI Agents', 'LLM Dev', 'Web & Apps', 'Research'],
+    color: '#0055ff',
   },
   {
-    name: "IA7 Global Tech",
-    fullName: "IA7 Global Trading UG (haftungsbeschränkt)",
-    country: "Germany 🇩🇪",
-    role: "European Arm",
-    description: "The European face of the group. Delivers AI-powered software, custom web applications, and IT solutions to businesses in Germany and across the EU.",
-    link: "https://www.ia7globaltech.eu",
-    linkLabel: "ia7globaltech.eu",
-    color: "#0E7C5A",
-    lightBg: "#E3F5EE",
-    tags: ["EU Market", "Custom Software", "AI Integration", "IT Consulting"],
-    badge: "Amtsgericht Berlin · HRB 269255",
+    flag: '🇩🇪',
+    name: 'IA7 Global Tech',
+    legal: 'IA7 Global Trading UG (haftungsbeschränkt)',
+    location: 'Berlin, Germany',
+    role: 'European Arm — You Are Here',
+    desc: 'The EU entity of the group. Contracts, delivers, and manages all services for European clients. Registered in Berlin, GDPR-compliant, German-law governed.',
+    link: 'https://www.ia7globaltech.eu',
+    badge: 'HRB 269255 · Berlin',
+    tags: ['EU Market', 'GDPR Ready', 'German Law', 'Berlin HQ'],
+    color: '#0E7C5A',
     highlight: true,
   },
   {
-    name: "BRJU InfoSec",
-    fullName: "BRJU InfoSec Inc.",
-    country: "USA 🇺🇸",
-    role: "Security Partner",
-    description: "North American cybersecurity firm with 30+ years of expertise. Handles all security services, compliance, and forensics for the group's clients worldwide.",
-    link: "https://www.brjuinfosec.com",
-    linkLabel: "brjuinfosec.com",
-    color: "#C95F0A",
-    lightBg: "#FEF0E4",
-    tags: ["Cybersecurity", "Odoo Partner", "Forensics", "Compliance"],
-    badge: "Odoo Certified Partner",
+    flag: '🇺🇸',
+    name: 'BRJU InfoSec',
+    legal: 'BRJU InfoSec Inc.',
+    location: 'Westmont, Illinois, USA',
+    role: 'Cybersecurity Partner',
+    desc: '30+ years of enterprise security expertise. Handles all cybersecurity services, pen testing, forensics, and compliance for the group — including as an Odoo Certified Partner.',
+    link: 'https://www.brjuinfosec.com',
+    badge: 'Odoo Certified Partner',
+    tags: ['Cybersecurity', 'Odoo', 'Pen Testing', 'Compliance'],
+    color: '#C95F0A',
   },
 ];
 
 const EcosystemSection: React.FC = () => {
   return (
-    <section className="py-20 md:py-32 px-6 bg-[#0f172a]" id="ecosystem">
+    <section id="ecosystem" className="py-20 md:py-28 px-6 bg-slate-900">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="mb-16 md:mb-20">
-          <div className="inline-block px-4 py-1.5 border border-white/10 text-[10px] font-black uppercase tracking-[0.3em] text-[#0055ff] rounded-full mb-6">
-            Global Entity Network
-          </div>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl heading uppercase leading-[0.9] tracking-tighter text-white">
-            One Group. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-emerald-400">Three Entities.</span>
+        <div className="mb-14">
+          <p className="section-label mb-4" style={{ color: '#60a5fa' }}>Global Entity Network</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white uppercase tracking-tight leading-tight">
+            One Group.<br />
+            <span className="gradient-text">Three Continents.</span>
           </h2>
-          <p className="mt-6 text-slate-400 text-lg max-w-2xl leading-relaxed">
-            IA7 Global Tech is part of a connected group of companies spanning India, Europe, and North America — designed to deliver AI, software, and security services under one coordinated network.
+          <p className="mt-4 text-slate-400 text-lg max-w-2xl leading-relaxed">
+            When you work with IA7 Global Tech in Europe, you get access to a connected network — AI R&D from India, cybersecurity from the US, all coordinated from Berlin.
           </p>
         </div>
 
-        {/* Entity Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
           {entities.map((e) => (
-            <div
-              key={e.name}
-              className={`relative rounded-2xl border p-8 flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1 ${
-                e.highlight
-                  ? 'border-[#0055ff]/40 bg-[#0055ff]/5'
-                  : 'border-white/10 bg-white/[0.03]'
-              }`}
-            >
+            <div key={e.name} className={`relative rounded-2xl p-7 flex flex-col gap-5 border transition-all hover:-translate-y-1 duration-300 ${
+              e.highlight
+                ? 'bg-white/5 border-[#0055ff]/40 ring-1 ring-[#0055ff]/20'
+                : 'bg-white/[0.03] border-white/10'
+            }`}>
               {e.highlight && (
-                <div className="absolute -top-3 left-8">
-                  <span className="bg-[#0055ff] text-white text-[9px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full">
+                <div className="absolute -top-3 left-6">
+                  <span className="bg-[#0055ff] text-white text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                     You Are Here
                   </span>
                 </div>
               )}
 
-              {/* Entity name + country */}
+              {/* Flag + role */}
               <div>
-                <div className="text-[10px] font-bold uppercase tracking-[0.3em] mb-2" style={{ color: e.color }}>
-                  {e.country} · {e.role}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-3xl">{e.flag}</span>
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500 bg-white/5 px-2 py-1 rounded-full">
+                    {e.badge}
+                  </span>
                 </div>
-                <h3 className="text-2xl font-black text-white heading uppercase tracking-tight">
-                  {e.name}
-                </h3>
-                <p className="text-[11px] text-slate-500 mt-1">{e.fullName}</p>
+                <h3 className="font-display text-xl font-bold text-white uppercase tracking-tight">{e.name}</h3>
+                <p className="text-[10px] text-slate-500 mt-0.5">{e.legal}</p>
+                <p className="text-[11px] font-semibold mt-1" style={{ color: e.color }}>{e.role}</p>
               </div>
 
-              {/* Description */}
-              <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                {e.description}
-              </p>
+              <p className="text-slate-400 text-sm leading-relaxed flex-1">{e.desc}</p>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {e.tags.map(tag => (
-                  <span
-                    key={tag}
-                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border"
-                    style={{ color: e.color, borderColor: `${e.color}40`, backgroundColor: `${e.color}10` }}
-                  >
-                    {tag}
+              <div className="flex flex-wrap gap-1.5">
+                {e.tags.map(t => (
+                  <span key={t} className="text-[9px] font-bold uppercase tracking-wide px-2 py-1 rounded-full border"
+                    style={{ color: e.color, borderColor: `${e.color}30`, background: `${e.color}10` }}>
+                    {t}
                   </span>
                 ))}
               </div>
 
-              {/* Badge + Link */}
-              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">
-                  {e.badge}
-                </span>
-                <a
-                  href={e.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] font-black uppercase tracking-wider hover:underline transition-all"
-                  style={{ color: e.color }}
-                >
-                  {e.linkLabel} →
-                </a>
-              </div>
+              <a href={e.link} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors hover:underline"
+                style={{ color: e.color }}>
+                Visit Website →
+              </a>
             </div>
           ))}
         </div>
 
-        {/* How it works for clients */}
-        <div className="mt-16 p-8 md:p-10 rounded-2xl border border-white/10 bg-white/[0.02]">
-          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 mb-4">How It Works For You</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        {/* How it works */}
+        <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-10">
+          <p className="section-label mb-8 text-center" style={{ color: '#60a5fa' }}>How It Works For You As A Client</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: "01", title: "Contact IA7 in Europe", desc: "Single point of contact for all EU clients. We handle contracts, communication, and delivery." },
-              { step: "02", title: "Powered by JGAI R&D", desc: "All AI development, custom software, and technical work is executed by our India R&D team." },
-              { step: "03", title: "Secured by BRJU", desc: "Every solution is built with security in mind — or handed to BRJU InfoSec for dedicated security needs." },
-            ].map(item => (
-              <div key={item.step} className="space-y-3">
-                <div className="text-4xl font-black text-white/10 heading">{item.step}</div>
-                <h4 className="text-white font-bold text-sm uppercase tracking-wider">{item.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+              { n: '01', title: 'Contact IA7 in Berlin', body: 'One point of contact in Europe. Contracts under German law, invoiced in EUR, fully GDPR-compliant.' },
+              { n: '02', title: 'Built by JGAI in India', body: 'Your AI tools, chatbots, and web apps are engineered by our dedicated R&D team — fast and cost-efficient.' },
+              { n: '03', title: 'Secured by BRJU (USA)', body: 'Any security needs — audits, pen testing, compliance — handled by our US cybersecurity partner.' },
+            ].map(step => (
+              <div key={step.n} className="text-center space-y-3">
+                <div className="font-display text-5xl font-bold text-white/10">{step.n}</div>
+                <h4 className="text-white font-bold uppercase tracking-wide text-sm">{step.title}</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">{step.body}</p>
               </div>
             ))}
           </div>

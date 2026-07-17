@@ -1,77 +1,87 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const links = [
+    { label: 'Services', href: '#services' },
+    { label: 'AI Chatbot', href: '#ai-chatbot' },
+    { label: 'Our Group', href: '#ecosystem' },
+    { label: 'Contact', href: '#contact' },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/70 backdrop-blur-xl border-b border-slate-100">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-8">
-          <div className="text-xl font-bold tracking-tighter uppercase heading flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#0055ff] flex items-center justify-center text-white text-[10px] rounded-[4px]">7</div>
-            IA7 <span className="text-[#0055ff]">GLOBAL TECH</span>
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      scrolled ? 'bg-white shadow-sm shadow-slate-100' : 'bg-white/80 backdrop-blur-xl'
+    } border-b border-slate-100`}>
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+        {/* Logo */}
+        <a href="/" className="flex items-center gap-2.5 group">
+          <div className="w-8 h-8 bg-[#0055ff] rounded-lg flex items-center justify-center text-white font-display font-bold text-sm group-hover:bg-[#0044dd] transition-colors">
+            7
           </div>
-          <div className="hidden lg:flex items-center gap-8 text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">
-            <a href="#services" className="hover:text-[#0055ff] transition-colors">{t('navbar.services')}</a>
-            <a href="#ai-chatbot" className="hover:text-[#0055ff] transition-colors">AI Chatbot</a>
-            <a href="#ecosystem" className="hover:text-[#0055ff] transition-colors">Our Group</a>
-            <a href="#consult" className="hover:text-[#0055ff] transition-colors">{t('navbar.inquiry')}</a>
-          </div>
+          <span className="font-display text-lg font-bold tracking-tight text-slate-900 uppercase">
+            IA7 <span className="text-[#0055ff]">Global Tech</span>
+          </span>
+        </a>
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-8">
+          {links.map(l => (
+            <a key={l.href} href={l.href}
+              className="text-[12px] font-semibold text-slate-500 hover:text-[#0055ff] transition-colors uppercase tracking-wide">
+              {l.label}
+            </a>
+          ))}
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="hidden lg:block">
-            <LanguageSwitcher />
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-slate-900 focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <div className="w-6 h-5 relative flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
-            </div>
-          </button>
+        {/* Right */}
+        <div className="hidden lg:flex items-center gap-4">
+          <LanguageSwitcher />
+          <a href="#contact"
+            className="bg-[#0055ff] text-white text-[11px] font-bold uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-[#0044dd] transition-colors">
+            Get Started
+          </a>
         </div>
+
+        {/* Mobile toggle */}
+        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2" aria-label="Menu">
+          <div className="w-5 flex flex-col gap-1.5">
+            <span className={`block h-0.5 bg-slate-900 transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block h-0.5 bg-slate-900 transition-all ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 bg-slate-900 transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </div>
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-50 transition-all duration-300 lg:hidden ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} style={{ top: '73px' }}>
-        <div className="flex flex-col items-center justify-center h-full gap-8 pb-20">
-          <a
-            href="#services"
-            onClick={() => setIsOpen(false)}
-            className="text-2xl font-bold uppercase tracking-widest text-slate-900 hover:text-[#0055ff] transition-colors"
-          >
-            {t('navbar.services')}
-          </a>
-          <a
-            href="#partner"
-            onClick={() => setIsOpen(false)}
-            className="text-2xl font-bold uppercase tracking-widest text-slate-900 hover:text-[#0055ff] transition-colors"
-          >
-            {t('navbar.rd_lab')}
-          </a>
-          <a
-            href="#consult"
-            onClick={() => setIsOpen(false)}
-            className="text-2xl font-bold uppercase tracking-widest text-slate-900 hover:text-[#0055ff] transition-colors"
-          >
-            {t('navbar.inquiry')}
-          </a>
-
-          <div className="pt-8 border-t border-slate-100 w-48 flex justify-center">
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t border-slate-100 px-6 py-8 flex flex-col gap-6">
+          {links.map(l => (
+            <a key={l.href} href={l.href} onClick={() => setIsOpen(false)}
+              className="text-lg font-bold uppercase tracking-wider text-slate-900 hover:text-[#0055ff]">
+              {l.label}
+            </a>
+          ))}
+          <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
             <LanguageSwitcher />
+            <a href="#contact" className="bg-[#0055ff] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full">
+              Get Started
+            </a>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

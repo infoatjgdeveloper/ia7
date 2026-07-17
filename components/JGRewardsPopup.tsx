@@ -2,109 +2,71 @@ import React, { useState, useEffect } from 'react';
 
 const JGRewardsPopup: React.FC = () => {
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    // Show after 12 seconds, only if not dismissed before
-    const alreadyDismissed = sessionStorage.getItem('jgrewards_dismissed');
-    if (alreadyDismissed) return;
-
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 12000);
-
-    return () => clearTimeout(timer);
+    const seen = sessionStorage.getItem('jgrewards_seen');
+    if (seen) return;
+    const t = setTimeout(() => setVisible(true), 14000);
+    return () => clearTimeout(t);
   }, []);
 
-  const handleDismiss = () => {
+  const dismiss = () => {
     setVisible(false);
-    setDismissed(true);
-    sessionStorage.setItem('jgrewards_dismissed', 'true');
+    sessionStorage.setItem('jgrewards_seen', '1');
   };
 
-  if (!visible || dismissed) return null;
+  if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 max-w-sm w-full animate-in">
-      <style>{`
-        @keyframes slideUp {
-          from { opacity: 0; transform: translateY(24px) scale(0.96); }
-          to   { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .animate-in { animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      `}</style>
+    <div className="fixed bottom-6 right-6 z-50 w-80 animate-pop-up">
+      <div className="bg-white rounded-2xl shadow-2xl shadow-slate-900/20 border border-slate-100 overflow-hidden">
+        {/* Top bar */}
+        <div className="h-1 bg-gradient-to-r from-[#0055ff] to-emerald-400" />
 
-      <div className="bg-[#0f172a] border border-white/10 rounded-2xl shadow-2xl shadow-black/40 overflow-hidden">
-        {/* Top accent bar */}
-        <div className="h-1 bg-gradient-to-r from-[#0055ff] via-emerald-400 to-[#0055ff]" />
-
-        <div className="p-6">
-          {/* Close button */}
-          <button
-            onClick={handleDismiss}
-            className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"
-            aria-label="Close"
-          >
+        <div className="p-5 relative">
+          <button onClick={dismiss} className="absolute top-4 right-4 text-slate-300 hover:text-slate-500 transition-colors">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 border border-emerald-100 rounded-full mb-3">
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400">New · JGRewards</span>
+            <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-600">New · JGRewards</span>
           </div>
 
-          {/* Content */}
-          <h3 className="text-white font-black text-xl heading uppercase tracking-tight leading-tight mb-2">
+          <h3 className="font-display text-lg font-bold text-slate-900 uppercase leading-tight mb-2">
             Reward Your Customers.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-emerald-400">
-              Grow Your Business.
-            </span>
+            <span className="gradient-text">Grow Faster.</span>
           </h3>
 
-          <p className="text-slate-400 text-sm leading-relaxed mb-6">
-            JGRewards is our SaaS loyalty & rewards platform — built for businesses that want to retain customers 
-            and drive repeat purchases. Try the live kiosk demo now.
+          <p className="text-slate-500 text-xs leading-relaxed mb-4">
+            JGRewards is a SaaS loyalty platform — points, kiosk mode, customer dashboard. Built by JGAI. Try the demo now.
           </p>
 
-          {/* Features */}
-          <div className="grid grid-cols-2 gap-2 mb-6">
-            {[
-              "Points & Rewards",
-              "Kiosk Mode",
-              "Customer Dashboard",
-              "Easy Integration",
-            ].map(f => (
-              <div key={f} className="flex items-center gap-2 text-slate-400 text-xs">
-                <span className="text-emerald-400 font-bold">✓</span>
-                <span>{f}</span>
+          <div className="grid grid-cols-2 gap-1.5 mb-4">
+            {['Points & Rewards', 'Kiosk Mode', 'Easy Integration', 'White Label'].map(f => (
+              <div key={f} className="flex items-center gap-1.5 text-[10px] text-slate-500">
+                <span className="text-emerald-500 font-bold text-xs">✓</span> {f}
               </div>
             ))}
           </div>
 
-          {/* CTAs */}
-          <div className="flex gap-3">
-            <a
-              href="https://jg-rewards.vercel.app/kiosk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center bg-[#0055ff] text-white py-3 rounded-xl text-xs font-black uppercase tracking-[0.15em] hover:bg-[#0044dd] transition-all"
-              onClick={handleDismiss}
-            >
+          <div className="flex gap-2">
+            <a href="https://jg-rewards.vercel.app/kiosk" target="_blank" rel="noopener noreferrer"
+              onClick={dismiss}
+              className="flex-1 text-center bg-[#0055ff] text-white py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-wider hover:bg-[#0044dd] transition-colors">
               Try Demo →
             </a>
-            <button
-              onClick={handleDismiss}
-              className="flex-1 text-center border border-white/10 text-slate-400 py-3 rounded-xl text-xs font-black uppercase tracking-[0.15em] hover:border-white/20 hover:text-white transition-all"
-            >
-              Maybe Later
+            <button onClick={dismiss}
+              className="flex-1 text-center bg-slate-50 text-slate-500 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors">
+              Later
             </button>
           </div>
 
-          <p className="text-slate-600 text-[10px] text-center mt-3">
-            By JG AI R&D · <a href="https://www.jgdeveloper.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">jgdeveloper.com</a>
+          <p className="text-[9px] text-slate-300 text-center mt-3">
+            By <a href="https://www.jgdeveloper.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400">JG AI R&D</a> · jgdeveloper.com
           </p>
         </div>
       </div>
