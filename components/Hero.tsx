@@ -20,6 +20,26 @@ About IA7 Global Tech:
 
 Your job: Help visitors understand what IA7 does, answer questions about services, and guide them toward booking a call or trying the AI chatbot demo. Be concise, professional, and friendly. Answer in the same language the user writes in (German or English). Keep responses to 2-3 sentences max unless they ask for detail. Never make up prices — direct them to contact us for quotes.`;
 
+// Smart fallback answers when API is unavailable
+const FALLBACKS: { match: RegExp; answer: string }[] = [
+  { match: /chatbot|chat bot|bot/i, answer: "We build custom AI chatbots trained on your business data — live on your website in 48 hours, in German and English. Try the full demo at jgai-demo.netlify.app or book a free call with us." },
+  { match: /fast|quick|speed|48|time|deploy/i, answer: "We deploy custom AI chatbots in 48 hours. From your briefing to a live bot on your site — that's our standard timeline." },
+  { match: /price|cost|pricing|how much|euro|€/i, answer: "Pricing depends on your specific needs. Reach out at info@ia7globaltech.eu or book a free 15-min call and we'll give you a clear quote." },
+  { match: /german|deutsch|germany|europe|eu/i, answer: "Yes — we're based in Berlin and our chatbots are fully multilingual. German, English, and more. Built specifically for European businesses." },
+  { match: /service|offer|what do|what can/i, answer: "We offer custom AI chatbots, web & app development, cloud setup, AI training workshops, and JGRewards — our SaaS loyalty platform. All delivered from our global R&D team, managed from Berlin." },
+  { match: /security|secure|gdpr|protect/i, answer: "Security is handled by our US partner BRJU InfoSec Inc. — 30+ years of enterprise cybersecurity experience. Every solution we build follows security best practices." },
+  { match: /contact|reach|email|call|phone/i, answer: "You can reach us at info@ia7globaltech.eu or +49 162 5767497. Or fill in our contact form and we'll get back to you within 24 hours." },
+  { match: /reward|loyalty|jgreward|kiosk|point/i, answer: "JGRewards is our SaaS loyalty platform — points system, spin wheel, kiosk mode, and customer dashboard. Try the live demo in the section below!" },
+  { match: /jgai|brju|india|usa|partner|network/i, answer: "IA7 Global Tech is part of the JGAI global network — JGAI R&D in India handles all AI and web development, BRJU InfoSec in the US handles cybersecurity, and IA7 in Berlin is your European point of contact." },
+];
+
+const getFallback = (input: string): string => {
+  for (const f of FALLBACKS) {
+    if (f.match.test(input)) return f.answer;
+  }
+  return "Great question! For a detailed answer, reach out at info@ia7globaltech.eu or book a free 15-min call with our team. We respond within 24 hours.";
+};
+
 const LiveChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     { from: 'bot', text: "Hallo! I'm IA7's AI assistant. Ask me anything about our services, or how we can help your business." }
@@ -36,6 +56,7 @@ const LiveChat: React.FC = () => {
     setInput('');
     setMessages(prev => [...prev, { from: 'user', text: msg }]);
     setLoading(true);
+
     try {
       const history = messages.map(m => ({ role: m.from === 'user' ? 'user' : 'assistant', content: m.text }));
       const res = await fetch('/api/chat', {
@@ -46,12 +67,19 @@ const LiveChat: React.FC = () => {
           messages: [...history, { role: 'user', content: msg }],
         }),
       });
+
+      if (!res.ok) throw new Error('API error');
       const data = await res.json();
-      const reply = data?.content?.[0]?.text || "Sorry, I couldn't respond. Please email info@ia7globaltech.eu";
+      const reply = data?.content?.[0]?.text;
+      if (!reply) throw new Error('No response');
       setMessages(prev => [...prev, { from: 'bot', text: reply }]);
     } catch {
-      setMessages(prev => [...prev, { from: 'bot', text: 'Connection issue. Please reach us at info@ia7globaltech.eu' }]);
-    } finally { setLoading(false); }
+      // Smart fallback instead of error message
+      await new Promise(r => setTimeout(r, 600));
+      setMessages(prev => [...prev, { from: 'bot', text: getFallback(msg) }]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const onKey = (e: React.KeyboardEvent) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } };
@@ -75,6 +103,7 @@ const LiveChat: React.FC = () => {
           Full demo →
         </a>
       </div>
+
       {/* Messages */}
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 8px', display: 'flex', flexDirection: 'column', gap: 10, background: '#fafbff' }}>
         {messages.map((m, i) => (
@@ -93,7 +122,8 @@ const LiveChat: React.FC = () => {
         )}
         <div ref={bottomRef} />
       </div>
-      {/* Suggested */}
+
+      {/* Suggested questions */}
       {messages.length === 1 && (
         <div style={{ padding: '8px 16px', background: '#fafbff', display: 'flex', gap: 6, flexWrap: 'wrap', borderTop: '1px solid #e8eeff' }}>
           {['What services do you offer?', 'How fast can you build a chatbot?', 'Do you work in German?'].map(q => (
@@ -101,6 +131,7 @@ const LiveChat: React.FC = () => {
           ))}
         </div>
       )}
+
       {/* Input */}
       <div style={{ padding: '12px 14px', borderTop: '1px solid #e8eeff', background: '#fff', display: 'flex', gap: 8, alignItems: 'flex-end', flexShrink: 0 }}>
         <textarea value={input} onChange={e => setInput(e.target.value)} onKeyDown={onKey} placeholder="Ask me anything about IA7..." rows={1}
@@ -138,7 +169,6 @@ const Hero: React.FC = () => (
             ))}
           </div>
         </div>
-        {/* RIGHT — Live AI chat, no floating badges */}
         <LiveChat />
       </div>
     </div>
