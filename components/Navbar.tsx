@@ -1,89 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar: React.FC = () => {
-  const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const [open, setOpen] = useState(false);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    const fn = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', fn);
+    return () => window.removeEventListener('scroll', fn);
   }, []);
-
   const links = [
     { label: 'Services', href: '#services' },
     { label: 'AI Chatbot', href: '#ai-chatbot' },
-    { label: 'Our Group', href: '#ecosystem' },
+    { label: 'Our group', href: '#group' },
     { label: 'Contact', href: '#contact' },
   ];
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-sm shadow-slate-100' : 'bg-white/80 backdrop-blur-xl'
-    } border-b border-slate-100`}>
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-
-        {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 bg-[#0055ff] rounded-lg flex items-center justify-center text-white font-display font-bold text-sm group-hover:bg-[#0044dd] transition-colors">
-            7
+    <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: scrolled ? 'rgba(255,255,255,0.96)' : '#fff', borderBottom: '1px solid #e8eeff', backdropFilter: scrolled ? 'blur(12px)' : 'none', transition: 'all 0.2s ease' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+          <div style={{ width: 30, height: 30, background: '#0055ff', borderRadius: 7, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span style={{ color: '#fff', fontSize: 13, fontWeight: 600 }}>7</span>
           </div>
-          <span className="font-display text-lg font-bold tracking-tight text-slate-900 uppercase">
-            IA7 <span className="text-[#0055ff]">Global Tech</span>
-          </span>
+          <span style={{ fontSize: 14, fontWeight: 500, color: '#0f0f0f', letterSpacing: '-0.01em' }}>IA7 Global Tech</span>
         </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 36 }} className="hide-mobile">
           {links.map(l => (
-            <a key={l.href} href={l.href}
-              className="text-[12px] font-semibold text-slate-500 hover:text-[#0055ff] transition-colors uppercase tracking-wide">
+            <a key={l.href} href={l.href} style={{ fontSize: 13, color: '#666', fontWeight: 400, transition: 'color 0.15s' }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#0055ff')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#666')}>
               {l.label}
             </a>
           ))}
         </div>
-
-        {/* Right */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }} className="hide-mobile">
           <LanguageSwitcher />
-          <a href="#contact"
-            className="bg-[#0055ff] text-white text-[11px] font-bold uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-[#0044dd] transition-colors">
-            Get Started
-          </a>
+          <a href="#contact" className="btn btn-dark" style={{ fontSize: 12, padding: '8px 18px' }}>Get started</a>
         </div>
-
-        {/* Mobile toggle */}
-        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2" aria-label="Menu">
-          <div className="w-5 flex flex-col gap-1.5">
-            <span className={`block h-0.5 bg-slate-900 transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block h-0.5 bg-slate-900 transition-all ${isOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 bg-slate-900 transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        <button onClick={() => setOpen(!open)} style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: 4 }} className="show-mobile">
+          <div style={{ width: 22, display: 'flex', flexDirection: 'column', gap: 5 }}>
+            <span style={{ display: 'block', height: 1.5, background: '#0f0f0f', transition: 'all 0.2s', transform: open ? 'rotate(45deg) translateY(6px)' : 'none' }} />
+            <span style={{ display: 'block', height: 1.5, background: '#0f0f0f', opacity: open ? 0 : 1 }} />
+            <span style={{ display: 'block', height: 1.5, background: '#0f0f0f', transition: 'all 0.2s', transform: open ? 'rotate(-45deg) translateY(-6px)' : 'none' }} />
           </div>
         </button>
       </div>
-
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 px-6 py-8 flex flex-col gap-6">
+      {open && (
+        <div style={{ borderTop: '1px solid #e8eeff', background: '#fff', padding: '20px 36px 28px' }}>
           {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setIsOpen(false)}
-              className="text-lg font-bold uppercase tracking-wider text-slate-900 hover:text-[#0055ff]">
-              {l.label}
-            </a>
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} style={{ display: 'block', padding: '12px 0', fontSize: 16, fontWeight: 500, color: '#0f0f0f', borderBottom: '1px solid #f5f5f5' }}>{l.label}</a>
           ))}
-          <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+          <div style={{ marginTop: 20, display: 'flex', gap: 12, alignItems: 'center' }}>
             <LanguageSwitcher />
-            <a href="#contact" className="bg-[#0055ff] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full">
-              Get Started
-            </a>
+            <a href="#contact" className="btn btn-dark">Get started</a>
           </div>
         </div>
       )}
+      <style>{`
+        @media (max-width: 768px) { .hide-mobile { display: none !important; } .show-mobile { display: flex !important; } }
+        @media (min-width: 769px) { .show-mobile { display: none !important; } }
+      `}</style>
     </nav>
   );
 };
-
 export default Navbar;

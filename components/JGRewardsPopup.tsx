@@ -1,77 +1,38 @@
 import React, { useState, useEffect } from 'react';
-
 const JGRewardsPopup: React.FC = () => {
   const [visible, setVisible] = useState(false);
-
   useEffect(() => {
-    const seen = sessionStorage.getItem('jgrewards_seen');
-    if (seen) return;
+    if (sessionStorage.getItem('jgr_seen')) return;
     const t = setTimeout(() => setVisible(true), 14000);
     return () => clearTimeout(t);
   }, []);
-
-  const dismiss = () => {
-    setVisible(false);
-    sessionStorage.setItem('jgrewards_seen', '1');
-  };
-
+  const dismiss = () => { setVisible(false); sessionStorage.setItem('jgr_seen', '1'); };
   if (!visible) return null;
-
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-80 animate-pop-up">
-      <div className="bg-white rounded-2xl shadow-2xl shadow-slate-900/20 border border-slate-100 overflow-hidden">
-        {/* Top bar */}
-        <div className="h-1 bg-gradient-to-r from-[#0055ff] to-emerald-400" />
-
-        <div className="p-5 relative">
-          <button onClick={dismiss} className="absolute top-4 right-4 text-slate-300 hover:text-slate-500 transition-colors">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 border border-emerald-100 rounded-full mb-3">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-600">New · JGRewards</span>
-          </div>
-
-          <h3 className="font-display text-lg font-bold text-slate-900 uppercase leading-tight mb-2">
-            Reward Your Customers.<br />
-            <span className="gradient-text">Grow Faster.</span>
-          </h3>
-
-          <p className="text-slate-500 text-xs leading-relaxed mb-4">
-            JGRewards is a SaaS loyalty platform — points, kiosk mode, customer dashboard. Built by JGAI. Try the demo now.
-          </p>
-
-          <div className="grid grid-cols-2 gap-1.5 mb-4">
+    <div style={{ position: 'fixed', bottom: 24, right: 24, zIndex: 200, width: 300 }} className="popup-enter">
+      <div style={{ background: '#fff', border: '1px solid #e8eeff', borderRadius: 16, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,85,255,0.12)' }}>
+        <div style={{ height: 3, background: '#0055ff' }} />
+        <div style={{ padding: 22, position: 'relative' }}>
+          <button onClick={dismiss} style={{ position: 'absolute', top: 14, right: 14, background: 'none', border: 'none', cursor: 'pointer', color: '#bbb', fontSize: 18, lineHeight: 1 }}>&times;</button>
+          <p className="t-label" style={{ marginBottom: 10 }}>New — JGRewards</p>
+          <h3 className="t-h3" style={{ marginBottom: 10, lineHeight: 1.35 }}>Reward your customers.<br />Grow faster.</h3>
+          <p className="t-small" style={{ marginBottom: 18, lineHeight: 1.8 }}>Our SaaS loyalty platform — points system, kiosk mode, customer dashboard. Built by JGAI.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 18 }}>
             {['Points & Rewards', 'Kiosk Mode', 'Easy Integration', 'White Label'].map(f => (
-              <div key={f} className="flex items-center gap-1.5 text-[10px] text-slate-500">
-                <span className="text-emerald-500 font-bold text-xs">✓</span> {f}
+              <div key={f} style={{ display: 'flex', gap: 7, alignItems: 'center' }}>
+                <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#0055ff', flexShrink: 0 }} />
+                <span className="t-small">{f}</span>
               </div>
             ))}
           </div>
-
-          <div className="flex gap-2">
-            <a href="https://jg-rewards.vercel.app/kiosk" target="_blank" rel="noopener noreferrer"
-              onClick={dismiss}
-              className="flex-1 text-center bg-[#0055ff] text-white py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-wider hover:bg-[#0044dd] transition-colors">
-              Try Demo →
-            </a>
-            <button onClick={dismiss}
-              className="flex-1 text-center bg-slate-50 text-slate-500 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors">
-              Later
-            </button>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <a href="https://jg-rewards.vercel.app/kiosk" target="_blank" rel="noopener noreferrer" onClick={dismiss} className="btn btn-dark" style={{ flex: 1, justifyContent: 'center', fontSize: 12, padding: '9px 12px' }}>Try demo</a>
+            <button onClick={dismiss} className="btn btn-outline" style={{ flex: 1, fontSize: 12, padding: '9px 12px' }}>Maybe later</button>
           </div>
-
-          <p className="text-[9px] text-slate-300 text-center mt-3">
-            By <a href="https://www.jgdeveloper.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400">JG AI R&D</a> · jgdeveloper.com
-          </p>
+          <p className="t-small" style={{ textAlign: 'center', marginTop: 12 }}>By <a href="https://www.jgdeveloper.com" target="_blank" rel="noopener noreferrer" style={{ color: '#0055ff' }}>JG AI R&D</a></p>
         </div>
       </div>
     </div>
   );
 };
-
 export default JGRewardsPopup;
