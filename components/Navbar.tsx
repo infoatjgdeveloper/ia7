@@ -16,7 +16,8 @@ const Navbar: React.FC = () => {
           </div>
           <div className="hidden lg:flex items-center gap-8 text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">
             <a href="#services" className="hover:text-[#0055ff] transition-colors">{t('navbar.services')}</a>
-            <a href="#partner" className="hover:text-[#0055ff] transition-colors">{t('navbar.rd_lab')}</a>
+            <a href="#ai-chatbot" className="hover:text-[#0055ff] transition-colors">AI Chatbot</a>
+            <a href="#ecosystem" className="hover:text-[#0055ff] transition-colors">Our Group</a>
             <a href="#consult" className="hover:text-[#0055ff] transition-colors">{t('navbar.inquiry')}</a>
           </div>
         </div>

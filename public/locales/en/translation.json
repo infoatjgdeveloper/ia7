@@ -16,8 +16,9 @@
     },
     "navbar": {
         "services": "Services",
-        "rd_lab": "R&D Lab",
-        "inquiry": "Inquiry"
+        "rd_lab": "AI Chatbot",
+        "inquiry": "Inquiry",
+        "ecosystem": "Our Group"
     },
     "hero": {
         "badge": "AI Solutions & Custom Software for Europe",
