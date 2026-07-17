@@ -1,60 +1,66 @@
 import React from 'react';
 
 const ChatbotSection: React.FC = () => (
-  <section id="ai-chatbot" style={{ padding: '80px 0', borderBottom: '1px solid #e8eeff' }}>
+  <section id="ai-chatbot" style={{ padding: '80px 0', borderBottom: '1px solid #e8eeff', background: '#f8f9ff' }}>
     <div className="container">
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }}>
 
-        {/* LEFT */}
-        <div>
-          <p className="t-label" style={{ marginBottom: 14 }}>AI chatbot service</p>
-          <h2 className="t-h2" style={{ marginBottom: 18 }}>Your business,<br />answered automatically.</h2>
-          <p className="t-body" style={{ marginBottom: 36, maxWidth: 420 }}>
-            Custom AI assistants trained on your data — not a generic template. Deployed to your website in 48 hours, in German and English or any language you need.
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginBottom: 40 }}>
-            {[
-              { title: 'Live in 48 hours', desc: 'Fast deployment, no lengthy setup process.' },
-              { title: 'Trained on your business', desc: 'Your products, FAQs, and pricing — all built in.' },
-              { title: 'German and multilingual', desc: 'Built for the European market from the start.' },
-              { title: 'Integrates with your tools', desc: 'CRM, Odoo, WhatsApp, and your website.' },
-            ].map(f => (
-              <div key={f.title} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#0055ff', marginTop: 8, flexShrink: 0 }} />
-                <div>
-                  <div style={{ fontSize: 14, fontWeight: 500, color: '#0f0f0f', marginBottom: 2 }}>{f.title}</div>
-                  <div className="t-small">{f.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <a href="https://jgai-demo.netlify.app/" target="_blank" rel="noopener noreferrer" className="btn btn-dark">Try live demo</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSepDnB0Iwe85gTNT1HbeIAqv-pQLm1aFhE0Qz8iTCeMEwaVPw/viewform" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Get a custom quote</a>
-          </div>
+      {/* Section header */}
+      <div style={{ textAlign: 'center', marginBottom: 48 }}>
+        <p className="t-label" style={{ marginBottom: 12 }}>JGRewards — Our SaaS Product</p>
+        <h2 className="t-h2" style={{ marginBottom: 14 }}>Loyalty & rewards platform.</h2>
+        <p className="t-body" style={{ maxWidth: 480, margin: '0 auto' }}>
+          A complete loyalty platform for your business — points, spin wheel, offers, and raffles. Try the live demo below.
+        </p>
+      </div>
+
+      {/* Full-width tablet frame */}
+      <div style={{
+        maxWidth: 820,
+        margin: '0 auto',
+        background: '#1a1a2e',
+        borderRadius: 28,
+        padding: '16px 16px 24px',
+        boxShadow: '0 32px 80px rgba(0,0,0,0.2)',
+      }}>
+        {/* Tablet top bar */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: 14, position: 'relative' }}>
+          <div style={{ width: 60, height: 6, background: '#333', borderRadius: 3 }} />
+          <div style={{ position: 'absolute', right: 8, width: 10, height: 10, borderRadius: '50%', background: '#333' }} />
         </div>
 
-        {/* RIGHT — JGRewards kiosk only, no labels */}
-        <div style={{ border: '1px solid #e8eeff', borderRadius: 16, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,85,255,0.08)', height: 600 }}>
+        {/* Screen */}
+        <div style={{
+          borderRadius: 16,
+          overflow: 'hidden',
+          background: '#fff',
+          height: 680,
+        }}>
           <iframe
             src="https://jg-rewards.vercel.app/kiosk"
             title="JGRewards Kiosk"
             style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
-            loading="lazy"
             allow="clipboard-write"
+            scrolling="no"
           />
         </div>
 
+        {/* Tablet bottom bar */}
+        <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 16 }}>
+          <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#333' }} />
+        </div>
       </div>
+
+      {/* CTA below */}
+      <div style={{ textAlign: 'center', marginTop: 36, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <a href="https://jg-rewards.vercel.app" target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+          Open full screen
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepDnB0Iwe85gTNT1HbeIAqv-pQLm1aFhE0Qz8iTCeMEwaVPw/viewform" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+          Get JGRewards for your business
+        </a>
+      </div>
+
     </div>
-    <style>{`
-      @media (max-width: 900px) {
-        #ai-chatbot .container > div {
-          grid-template-columns: 1fr !important;
-          gap: 40px !important;
-        }
-      }
-    `}</style>
   </section>
 );
 
