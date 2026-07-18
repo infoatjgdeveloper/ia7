@@ -18,11 +18,8 @@ const Navbar: React.FC = () => {
   return (
     <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: scrolled ? 'rgba(255,255,255,0.96)' : '#fff', borderBottom: '1px solid #e8eeff', backdropFilter: scrolled ? 'blur(12px)' : 'none', transition: 'all 0.2s ease' }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
-        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-          <div style={{ width: 30, height: 30, background: '#0055ff', borderRadius: 7, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ color: '#fff', fontSize: 13, fontWeight: 600 }}>7</span>
-          </div>
-          <span style={{ fontSize: 14, fontWeight: 500, color: '#0f0f0f', letterSpacing: '-0.01em' }}>IA7 Global Tech</span>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <img src="/logo.png" alt="IA7 Global Tech" style={{ height: 36, width: 'auto', display: 'block' }} />
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 36 }} className="hide-mobile">
           {links.map(l => (

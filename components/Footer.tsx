@@ -8,11 +8,8 @@ const Footer: React.FC = () => (
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }}>
         {/* Brand */}
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 16 }}>
-            <div style={{ width: 30, height: 30, background: '#0055ff', borderRadius: 7, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ color: '#fff', fontSize: 13, fontWeight: 600 }}>7</span>
-            </div>
-            <span style={{ fontSize: 14, fontWeight: 500, color: '#0f0f0f' }}>IA7 Global Tech</span>
+          <div style={{ marginBottom: 16 }}>
+            <img src="/logo.png" alt="IA7 Global Tech" style={{ height: 48, width: 'auto', display: 'block' }} />
           </div>
           <p className="t-small" style={{ maxWidth: 220, marginBottom: 18, lineHeight: 1.8 }}>
             AI solutions and custom software for businesses in Germany and Europe. Part of the JGAI global network.
