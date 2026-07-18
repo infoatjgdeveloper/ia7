@@ -20,16 +20,16 @@
         "inquiry": "Anfrage"
     },
     "hero": {
-        "badge": "IT-Beratung für Unternehmen & Lösungen",
+        "badge": "KI-Lösungen & Software für Europa",
         "title_prefix": "Zukunftssichere",
         "title_suffix": "Software-Systeme.",
-        "description": "Wir entwerfen widerstandsfähige, maßgeschneiderte Softwarelösungen und sichere Cloud-Infrastrukturen für globale Marktführer. Technische Klarheit für die komplexe digitale Landschaft.",
+        "description": "Wir entwickeln KI-Chatbots, Webanwendungen und Automatisierungstools — geliefert von unserem F&E-Team, koordiniert aus Berlin.",
         "market_intelligence": "Tech-Intelligenz-Feed",
         "core_uptime": "Kern-Betriebszeit",
         "system_revision": "Systemrevision"
     },
     "footer": {
-        "description": "Elite IT-Beratung, individuelle Softwareentwicklung & Cloud-Architektur. Wir bedienen den globalen Markt mit hochpräzisen digitalen Systemen.",
+        "description": "KI-Lösungen und individuelle Softwareentwicklung für Unternehmen in Deutschland und Europa. Teil des JGAI Global Network.",
         "capabilities": "Fähigkeiten",
         "web_development": "Webentwicklung",
         "cloud_computing": "Cloud Computing",
@@ -62,8 +62,8 @@
                 "desc": "Souveräne Cloud-Strategien, Migration und FinOps-Optimierung in sicheren europäischen Infrastrukturumgebungen."
             },
             "security": {
-                "title": "Cybersicherheit",
-                "desc": "Zero-Trust-Architektur, NIS2-Compliance-Auditing und proaktive Bedrohungsanalyse zum Schutz kritischer Assets."
+                "title": "Sicherheitsbewusstes Entwickeln",
+                "desc": "Alle Produkte werden mit Sicherheitsbest-Practices entwickelt. Für dedizierte Cybersicherheit, Penetrationstests und Compliance — über unseren Partner BRJU InfoSec Inc. (USA)."
             },
             "intelligence": {
                 "title": "KI/ML",
@@ -81,11 +81,11 @@
         "title_suffix": "Protokoll.",
         "description_prefix": "IA7 Global Tech agiert als",
         "description_highlight": "Autorisierter Partner der JG AI Research and Development Pvt Ltd",
-        "description_suffix": ". Wir bringen proprietäre neuronale Technologien in die industrielle Produktion.",
-        "accreditation": "Akkreditierung",
-        "tier": "TIER-1 ELITE",
-        "verification_id": "Verifikations-ID",
-        "verified_partner": "Verifizierter Partner",
+        "description_suffix": " — ein DPIIT-anerkanntes KI-Startup aus Indien. Gemeinsam entwickeln wir KI-Lösungen für Kunden in Europa und Indien.",
+        "accreditation": "Anerkennung",
+        "tier": "DPIIT Anerkannt",
+        "verification_id": "Partnerschaft",
+        "verified_partner": "Europäischer Partner",
         "company_name": "JG AI R&D PVT LTD",
         "role": "Autorisierter Implementierungsknoten"
     },
@@ -93,8 +93,8 @@
         "badge": "Engagement Initiieren",
         "title_prefix": "Bereit für",
         "title_suffix": "Briefing?",
-        "description": "Unsere leitenden Berater stehen bereit, um Ihre Systemmigration 2026 zu planen. Hochpräzise Strategie für Elite-Operationen.",
-        "button": "Strategieknoten Kontaktieren"
+        "description": "Sagen Sie uns, was Sie brauchen. Wir kommen mit einem klaren Plan, einem realistischen Zeitplan und einem Preis zurück, der für Ihr Unternehmen Sinn macht.",
+        "button": "Kontakt aufnehmen"
     },
     "faq_page": {
         "back_home": "Zurück zur Startseite",

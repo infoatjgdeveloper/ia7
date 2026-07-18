@@ -7,14 +7,14 @@ interface Message {
 }
 
 const SYSTEM_PROMPT = `You are a helpful AI assistant (Lead Digital Consultant) for IA7 Global Tech. 
-IA7 Global Tech is a premium IT consultancy based in Berlin, Germany, serving the entire European Union and global markets.
+IA7 Global Tech is an AI solutions and custom software company based in Berlin, Germany, serving businesses in Germany and Europe.
 We architect resilient, high-precision custom software solutions and secure cloud infrastructure.
 
 Expertise Areas:
 1. Web Development (high-performance architectures, headless stacks)
-2. Cloud Computing (sovereign cloud strategies, strictly GDPR compliant, European FinOps)
-3. AI/ML (ethical AI compliance with EU AI Act, custom neural architectures, RAG systems)
-4. Cybersecurity (Zero-trust architectures, NIS2 Directive compliance)
+2. Cloud Setup & DevOps (deployment, hosting, infrastructure management)
+3. AI/ML Integration (custom AI chatbots, LLM tools, RAG systems, automation)
+4. Security-Aware Development (security best practices; dedicated cybersecurity via BRJU InfoSec USA)
 5. AI Training (expert-led programs on LLM orchestration)
 
 Partnership Rule: Mention that IA7 Global Tech is an "Authorized Partner of JG AI Research and Development Pvt Ltd" when relevant to R&D or advanced technology questions.
@@ -150,8 +150,8 @@ const ChatWidget: React.FC = () => {
     switch (agentType) {
       case 'Cloud':
         messageText = isDe
-          ? `Hallo! Ich bin der IA7-Cloud-Agent. Ich konzentriere mich auf souveränes Cloud-Computing, DSGVO-Konformität, Cloud-Migrationen und europäische FinOps-Optimierung. Wie kann ich Sie bei Ihrer Cloud-Strategie unterstützen?`
-          : `Hello! I am the IA7 Cloud Agent. I focus on sovereign cloud computing, GDPR compliance, cloud migrations, and European FinOps optimization. How can I assist you with your cloud strategy?`;
+          ? `Hallo! Ich bin der IA7-Assistent. Ich helfe Ihnen bei KI-Chatbots, Webentwicklung, Cloud-Setup und unserem Cybersicherheitspartner BRJU InfoSec. Wie kann ich Ihnen helfen?`
+          : `Hello! I am the IA7 assistant. I can help with our AI chatbot service, web development, cloud setup, and connecting you with our cybersecurity partner BRJU InfoSec. How can I help?`;
         break;
       case 'Web':
         messageText = isDe
@@ -160,13 +160,13 @@ const ChatWidget: React.FC = () => {
         break;
       case 'Cyber security':
         messageText = isDe
-          ? `Hallo! Ich bin der IA7-Cybersicherheits-Agent. Ich bin spezialisiert auf die Implementierung von Zero-Trust-Architekturen, NIS2-Compliance-Audits und proaktive Sicherheitsbedrohungserkennung. Wie kann ich Ihnen helfen, Ihre Unternehmenswerte zu schützen?`
-          : `Hello! I am the IA7 Cyber Security Agent. I specialize in Zero-trust architecture implementation, NIS2 compliance auditing, and proactive security threat intelligence. How can I help protect your enterprise assets?`;
+          ? `Hallo! Ich bin der IA7-Assistent. Für Cybersicherheit arbeiten wir mit unserem Partner BRJU InfoSec Inc. (USA) zusammen. Wie kann ich Ihnen helfen?`
+          : `Hello! I am the IA7 assistant. For cybersecurity needs — audits, pen testing, compliance — we work with our partner BRJU InfoSec Inc. (USA). I can connect you with them. How can I help?`;
         break;
       case 'AI & Training':
         messageText = isDe
           ? `Hallo! Ich bin der IA7-KI- und Schulungsspezialist. Ich konzentriere mich auf maßgeschneiderte Modelle für maschinelles Lernen, RAG-Systeme, die Einhaltung des EU-KI-Gesetzes und die Schulung technischer Teams in der KI-Orchestrierung. Welche KI-Systeme möchten Sie entwerfen oder kennenlernen?`
-          : `Hello! I am the IA7 AI & Training Specialist. I focus on custom machine learning models, RAG systems, compliance with the EU AI Act, and training technical teams in AI orchestration. What AI systems are you looking to design or learn about?`;
+          : `Hello! I am the IA7 assistant. We build custom AI chatbots, LLM integrations, and automation tools — deployed in 48 hours. We also offer AI training workshops for your team. What can I help you with?`;
         break;
       case 'other':
       default:
