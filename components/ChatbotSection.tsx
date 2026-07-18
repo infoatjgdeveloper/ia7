@@ -13,30 +13,32 @@ const ChatbotSection: React.FC = () => (
         </p>
       </div>
 
-      {/* iPad 13" Landscape */}
-      <div style={{ maxWidth: 760, margin: '0 auto', position: 'relative' }}>
+      {/* iPad 13" Landscape — thin bezel, screen fills frame */}
+      <div style={{ maxWidth: 860, margin: '0 auto', position: 'relative' }}>
         <div style={{
           background: 'linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%)',
-          borderRadius: 36,
-          padding: '14px 48px',
-          boxShadow: '0 0 0 1px #444, 0 40px 100px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08)',
+          borderRadius: 28,
+          padding: '10px 14px',
+          boxShadow: '0 0 0 1px #444, 0 32px 80px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)',
           position: 'relative',
         }}>
-          <div style={{ position: 'absolute', left: -3, top: '30%', width: 3, height: 60, background: '#333', borderRadius: '2px 0 0 2px' }} />
-          <div style={{ position: 'absolute', right: -3, top: '35%', width: 3, height: 40, background: '#333', borderRadius: '0 2px 2px 0' }} />
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 14, marginBottom: 6 }}>
-            <div style={{ width: 80, height: 4, background: '#111', borderRadius: 2 }} />
+          {/* Side buttons */}
+          <div style={{ position: 'absolute', left: -3, top: '28%', width: 3, height: 48, background: '#333', borderRadius: '2px 0 0 2px' }} />
+          <div style={{ position: 'absolute', right: -3, top: '35%', width: 3, height: 32, background: '#333', borderRadius: '0 2px 2px 0' }} />
+
+          {/* Top camera strip */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 10, marginBottom: 4 }}>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#333', border: '1px solid #444' }} />
           </div>
 
-          {/* Screen with scaled iframe */}
+          {/* Screen — fills the frame */}
           <div style={{
-            borderRadius: 18,
+            borderRadius: 14,
             overflow: 'hidden',
-            background: '#0033cc',
             aspectRatio: '4/3',
             position: 'relative',
+            background: '#0033cc',
           }}>
-            {/* Scale wrapper — shrink iframe content to fit */}
             <div style={{
               position: 'absolute',
               top: 0, left: 0,
@@ -44,7 +46,6 @@ const ChatbotSection: React.FC = () => (
               height: '200%',
               transform: 'scale(0.5)',
               transformOrigin: 'top left',
-              pointerEvents: 'all',
             }}>
               <iframe
                 src="https://jg-rewards.vercel.app/kiosk"
@@ -56,15 +57,18 @@ const ChatbotSection: React.FC = () => (
             </div>
           </div>
 
-          <div style={{ height: 14, marginTop: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ width: 100, height: 3, background: '#111', borderRadius: 2 }} />
+          {/* Bottom bar */}
+          <div style={{ height: 10, marginTop: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ width: 80, height: 3, background: '#333', borderRadius: 2 }} />
           </div>
         </div>
-        <div style={{ position: 'absolute', bottom: -30, left: '10%', right: '10%', height: 30, background: 'radial-gradient(ellipse, rgba(0,0,0,0.15) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(8px)' }} />
+
+        {/* Shadow */}
+        <div style={{ position: 'absolute', bottom: -24, left: '10%', right: '10%', height: 24, background: 'radial-gradient(ellipse, rgba(0,0,0,0.12) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(6px)' }} />
       </div>
 
       {/* CTAs */}
-      <div style={{ textAlign: 'center', marginTop: 52, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div style={{ textAlign: 'center', marginTop: 48, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
         <a href="https://jg-rewards.vercel.app" target="_blank" rel="noopener noreferrer" className="btn btn-dark">Open full screen</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSepDnB0Iwe85gTNT1HbeIAqv-pQLm1aFhE0Qz8iTCeMEwaVPw/viewform" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Get JGRewards for your business</a>
       </div>
