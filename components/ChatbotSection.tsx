@@ -13,8 +13,8 @@ const ChatbotSection: React.FC = () => (
         </p>
       </div>
 
-      {/* iPad 13" Landscape — thin bezel, screen fills frame */}
-      <div style={{ maxWidth: 860, margin: '0 auto', position: 'relative' }}>
+      {/* iPad frame */}
+      <div style={{ maxWidth: 960, margin: '0 auto', position: 'relative' }}>
         <div style={{
           background: 'linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%)',
           borderRadius: 28,
@@ -26,25 +26,19 @@ const ChatbotSection: React.FC = () => (
           <div style={{ position: 'absolute', left: -3, top: '28%', width: 3, height: 48, background: '#333', borderRadius: '2px 0 0 2px' }} />
           <div style={{ position: 'absolute', right: -3, top: '35%', width: 3, height: 32, background: '#333', borderRadius: '0 2px 2px 0' }} />
 
-          {/* Top camera strip */}
+          {/* Camera */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 10, marginBottom: 4 }}>
             <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#333', border: '1px solid #444' }} />
           </div>
 
-          {/* Screen — fills the frame */}
-          <div style={{
-            borderRadius: 14,
-            overflow: 'hidden',
-            aspectRatio: '4/3',
-            position: 'relative',
-            background: '#0033cc',
-          }}>
+          {/* Screen — 75% scale so cards are bigger */}
+          <div style={{ borderRadius: 14, overflow: 'hidden', aspectRatio: '4/3', position: 'relative', background: '#0033cc' }}>
             <div style={{
               position: 'absolute',
               top: 0, left: 0,
-              width: '200%',
-              height: '200%',
-              transform: 'scale(0.5)',
+              width: '133.33%',
+              height: '133.33%',
+              transform: 'scale(0.75)',
               transformOrigin: 'top left',
             }}>
               <iframe
@@ -57,13 +51,11 @@ const ChatbotSection: React.FC = () => (
             </div>
           </div>
 
-          {/* Bottom bar */}
+          {/* Bottom */}
           <div style={{ height: 10, marginTop: 4, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{ width: 80, height: 3, background: '#333', borderRadius: 2 }} />
           </div>
         </div>
-
-        {/* Shadow */}
         <div style={{ position: 'absolute', bottom: -24, left: '10%', right: '10%', height: 24, background: 'radial-gradient(ellipse, rgba(0,0,0,0.12) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(6px)' }} />
       </div>
 
