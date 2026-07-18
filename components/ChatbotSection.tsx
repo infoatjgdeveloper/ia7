@@ -14,7 +14,7 @@ const ChatbotSection: React.FC = () => (
       </div>
 
       {/* iPad 13" Landscape */}
-      <div style={{ maxWidth: 1100, margin: '0 auto', position: 'relative' }}>
+      <div style={{ maxWidth: 760, margin: '0 auto', position: 'relative' }}>
         <div style={{
           background: 'linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%)',
           borderRadius: 36,
